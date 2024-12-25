@@ -20,6 +20,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
+  boot.supportedFilesystems = [ "zfs" ];
+  boot.zfs.forceImportRoot = false;
 
   # Nix Settings
   # Perform garbage collection weekly to maintain low disk usage
@@ -32,6 +34,7 @@
 
   # Networking
   networking.hostName = "dnsc-server";
+  networking.hostId = "380f584e";
   networking.networkmanager.enable = true;
 
   # My user account
