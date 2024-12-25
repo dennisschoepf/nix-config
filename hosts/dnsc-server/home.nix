@@ -13,6 +13,7 @@
     fzf
     iotop
     iftop
+    just
   ];
 
   programs.home-manager.enable = true;
