@@ -14,6 +14,7 @@
     iotop
     iftop
     just
+    mmv-go
   ];
 
   programs.home-manager.enable = true;
