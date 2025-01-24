@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-24.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -26,10 +26,10 @@
       modules = [./hosts/dnsc-server];
     };
 
-    darwinConfigurations.dnsc-mac = nixpkgs.lib.nixosSystem {
+    darwinConfigurations.dnsc-air = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       specialArgs = {inherit inputs outputs;};
-      modules = [./hosts/dnsc-mac];
+      modules = [./hosts/dnsc-air];
     };
   };
 }
