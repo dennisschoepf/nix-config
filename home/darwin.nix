@@ -5,11 +5,17 @@
   home.homeDirectory = "/Users/dennis";
   home.stateVersion = "24.11";
 
-  programs.home-manager.enable = true;
-
-  programs.git = {
-    enable = true;
-    userName = "Dennis Schoepf";
-    userEmail = "me@dnsc.io";
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    GOPATH = "$HOME/go";
   };
+
+  imports = [
+    ./modules/git
+    ./modules/fish
+    ./modules/wezterm
+    ./modules/nvim
+  ];
+
+  programs.home-manager.enable = true;
 }
