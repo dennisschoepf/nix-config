@@ -8,6 +8,7 @@
 }: {
   imports = [
     inputs.home-manager.darwinModules.home-manager
+    ../../home/modules/aerospace
   ];
 
   # Setting the user
@@ -70,7 +71,6 @@
 
     casks = [
       "zen-browser"
-      "aerospace"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "mullvadvpn"
