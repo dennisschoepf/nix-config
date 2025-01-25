@@ -33,6 +33,7 @@
     fortune
     neofetch
     neovim
+    just
   ];
   
   # Homebrew
