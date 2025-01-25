@@ -23,3 +23,10 @@ clean:
 
 gc:
   sudo nix-collect-garbage --delete-old 
+
+# dnsc-air
+mac-re:
+  darwin-rebuild switch --flake .
+
+mac-up:
+  darwin-rebuild switch --recreate-lock-file --flake .
