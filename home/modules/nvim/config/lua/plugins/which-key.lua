@@ -179,7 +179,5 @@ return {
       mode = "n",
     },
     { "<leader>xr", "<cmd>source $MYVIMRC<cr>", desc = "Reload config", mode = "n" },
-    { "<leader>do", "<cmd>DiffviewOpen<cr>", desc = "Open diff view", mode = "n" },
-    { "<leader>dh", "<cmd>DiffviewFileHistory<cr>", desc = "Open file history diff", mode = "n" },
   },
 }

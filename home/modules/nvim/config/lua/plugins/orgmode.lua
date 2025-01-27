@@ -1,5 +1,8 @@
 return {
   "nvim-orgmode/orgmode",
+  dependencies = {
+    "akinsho/org-bullets.nvim",
+  },
   event = "VeryLazy",
   ft = { "org" },
   config = function()
@@ -20,6 +23,8 @@ return {
         a = { description = "Task at line", template = "* TODO %?\nat: %a" },
       },
     })
+
+    require("org-bullets").setup()
 
     vim.api.nvim_create_autocmd("FileType", {
       pattern = "org",
