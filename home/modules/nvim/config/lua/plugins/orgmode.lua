@@ -10,7 +10,7 @@ return {
       org_agenda_files = "~/orgnzr/**/*",
       org_default_notes_file = "~/orgnzr/inbox.org",
       org_todo_keywords = { "PROJECT(p)", "TODO(t)", "NEXT(n)", "|", "DONE(d)" },
-      win_split_mode = "120vsplit",
+      win_split_mode = "auto",
       org_startup_indented = true,
       org_indent_mode_turns_off_org_adapt_indentation = true,
       org_hide_leading_stars = true,
