@@ -36,6 +36,10 @@
   networking.hostName = "dnsc-server";
   networking.hostId = "380f584e";
   networking.networkmanager.enable = true;
+  # Fix due to https://github.com/NixOS/nixpkgs/issues/180175
+  systemd.services.NetworkManager-wait-online.enable = false;
+
+  # Firewall
   networking.firewall.enable = true;
   networking.firewall.allowedTCPPorts = [
     8384 # Syncthing GUI
@@ -60,7 +64,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
-      dennis = import ../../home/server;
+      dennis = import ../../home/server.nix;
     };
   };
 
