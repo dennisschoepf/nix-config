@@ -83,7 +83,7 @@ return {
       desc = "Toggle git line blame",
       mode = "n",
     },
-    { "<leader>gg", "<cmd>LazyGit<CR>", desc = "Opens lazygit", mode = "n" },
+    { "<leader>gg", "<cmd>Neogit<CR>", desc = "Opens neogit", mode = "n" },
     {
       "<leader>glo",
       "<cmd>GitLink!<cr>",
