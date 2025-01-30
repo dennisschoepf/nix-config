@@ -179,5 +179,6 @@ return {
       mode = "n",
     },
     { "<leader>xr", "<cmd>source $MYVIMRC<cr>", desc = "Reload config", mode = "n" },
+    { "<leader>z", "<cmd>ZenMode<cr>", desc = "Toggle ZenMode", mode = "n" },
   },
 }

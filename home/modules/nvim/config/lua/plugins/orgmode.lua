@@ -18,9 +18,24 @@ return {
       org_startup_folded = "content",
       org_ellipsis = "  ",
       org_capture_templates = {
-        t = { description = "Task", template = "* TODO %?\n" },
-        l = { description = "Link", template = "* TODO [[%x]]%?" },
-        a = { description = "Task at line", template = "* TODO %?\nat: %a" },
+        t = { description = "(t)odo", template = "* TODO %?\n" },
+        a = { description = "Todo (a)t line", template = "* TODO %?\nat: %a" },
+        l = { description = "(l)ink", template = "* %x%?" },
+        j = {
+          description = "(j)ournal entry",
+          template = "\n** %?",
+          datetree = {
+            tree_type = "custom",
+            tree = {
+              {
+                format = "%Y-%m-%d",
+                pattern = "^(%d%d%d%d)-(%d%d)-(%d%d)$",
+                order = { 1 },
+              },
+            },
+          },
+          target = "~/orgnzr/journal.org",
+        },
       },
     })
 

@@ -30,6 +30,8 @@
     ripgrep
     fzf
     fd
+    sd
+    bat
     fortune
     neofetch
     neovim
@@ -57,9 +59,6 @@
       "tree-sitter"
       "yt-dlp"
       "zoxide"
-      "nuspell"
-      "aspell"
-      "enchant"
       "pinentry"
       "pinentry-mac"
       "shellcheck"
