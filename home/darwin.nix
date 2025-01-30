@@ -10,6 +10,8 @@
     GOPATH = "$HOME/go";
   };
 
+  xdg.enable = true;
+
   imports = [
     ./modules/git
     ./modules/fish

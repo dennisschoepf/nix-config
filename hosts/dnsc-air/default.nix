@@ -84,6 +84,7 @@
       "eurkey"
       "karabiner-elements"
       "vial"
+      "wezterm"
     ];
   };
 
