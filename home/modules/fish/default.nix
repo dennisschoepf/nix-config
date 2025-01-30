@@ -21,6 +21,7 @@
         end
       '';
       fish_greeting = "fortune -a";
+      ng = "nvim -c \"Neogit\"";
     };
 
     interactiveShellInit = ''
