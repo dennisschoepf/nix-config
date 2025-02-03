@@ -22,6 +22,7 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     local servers = {
+      "eslint",
       "angularls",
       "ts_ls",
       "lua_ls",
@@ -115,6 +116,9 @@ return {
 
     -- Angular
     lspconfig.angularls.setup({})
+
+    -- ESLint
+    lspconfig.eslint.setup({})
 
     -- Go
     lspconfig.gopls.setup({
