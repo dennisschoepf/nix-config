@@ -49,7 +49,7 @@ return {
     },
     { "<leader>c", group = "code", mode = "n" },
     { "<leader>ca", "<cmd>FzfLua lsp_code_actions", desc = "Code actions", mode = "n" },
-    { "<leader>cd", "<cmd>FzfLua lsp_diagnostics_document<cr>", desc = "Show diagnostics", mode = "n" },
+    { "<leader>cd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Show diagnostics", mode = "n" },
     {
       "<leader>cf",
       "<cmd>FzfLua lsp_references<cr>",
