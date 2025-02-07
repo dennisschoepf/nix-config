@@ -76,7 +76,6 @@
       "mullvadvpn"
       "vlc"
       "alfred"
-      "signal"
       "wezterm"
       "arc"
       "hiddenbar"
@@ -112,7 +111,6 @@
         show-recents = false;
         persistent-apps = [
           "/Applications/Arc.app"
-          "/Applications/Emacs.app"
           "/Applications/WezTerm.app"
           "/Applications/Photomator.app"
           "/System/Applications/System Settings.app/"

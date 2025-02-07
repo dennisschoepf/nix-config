@@ -4,10 +4,12 @@
     settings = {
       accordion-padding = 25;
       gaps = {
-        outer.left = 8;
-        outer.bottom = 8;
-        outer.top = 8;
-        outer.right = 8;
+        inner.horizontal = 6;
+        inner.vertical = 6;
+        outer.left = 6;
+        outer.bottom = 6;
+        outer.top = 6;
+        outer.right = 6;
       };
       workspace-to-monitor-force-assignment = {
         "1" = "main";
