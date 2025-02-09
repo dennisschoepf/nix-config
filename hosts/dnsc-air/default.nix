@@ -36,6 +36,7 @@
     neofetch
     neovim
     just
+    tldr
   ];
   
   # Homebrew
