@@ -40,6 +40,7 @@
 
       envsource ~/.env
 
+      zoxide init fish | source
       fnm env --use-on-cd --shell fish | source
     '';
 
@@ -47,7 +48,6 @@
       lg = "lazygit";
       g = "git";
       frc = "source ~/.config/fish/**/*.fish";
-      z = "zoxide";
     };
   };
 
