@@ -47,6 +47,7 @@
       lg = "lazygit";
       g = "git";
       frc = "source ~/.config/fish/**/*.fish";
+      z = "zoxide";
     };
   };
 
