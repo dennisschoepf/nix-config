@@ -17,6 +17,7 @@
     ./modules/fish
     ./modules/wezterm
     ./modules/nvim
+    ./modules/lazygit
   ];
 
   programs.home-manager.enable = true;
