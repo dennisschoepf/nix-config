@@ -45,8 +45,7 @@
 
     onActivation = {
       autoUpdate = false;
-      # 'zap': uninstalls all formulae(and related files) not listed here.
-      # cleanup = "zap";
+      cleanup = "zap";
     };
 
     taps = [
@@ -54,9 +53,8 @@
     ];
 
     brews = [
+      "lazygit"
       "ffmpeg"
-      "clojure"
-      "babashka"
       "tree-sitter"
       "yt-dlp"
       "zoxide"
@@ -108,7 +106,7 @@
         expose-group-apps = true;
         launchanim = false;
         minimize-to-application = true;
-        orientation = "right";
+        orientation = "left";
         show-recents = false;
         persistent-apps = [
           "/Applications/Arc.app"
