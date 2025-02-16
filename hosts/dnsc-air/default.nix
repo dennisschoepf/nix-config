@@ -35,6 +35,9 @@
     neovim
     just
     tldr
+    aider-chat
+    fortune
+    neofetch
   ];
   
   # Homebrew
