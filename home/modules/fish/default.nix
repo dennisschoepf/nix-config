@@ -23,9 +23,14 @@
       fish_greeting = "fortune -a";
       ng = "nvim -c \"Neogit\"";
       resize_images = ''
+        set -l percentage $argv[1]
+        if test -z "$percentage"
+          set percentage 40
+        end
+        
         for img in (find . -type f -name "*.JPG")
           set original_size (stat -f %z "$img")
-          magick convert "$img" -resize 40% "$img"
+          magick convert "$img" -resize "$percentage%" "$img"
           set new_size (stat -f %z "$img")
           echo "Processed $img"
           echo "Original size: $original_size bytes"
