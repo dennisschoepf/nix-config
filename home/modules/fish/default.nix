@@ -23,6 +23,11 @@
       fish_greeting = "fortune -a";
       ng = "nvim -c \"Neogit\"";
       resize_images = ''
+        # Resize all JPG images in the current directory and its subdirectories
+        # Usage: resize_images [percentage]
+        # Example: resize_images 20 - resizes all images to 20% of original size
+        # If no percentage is provided, defaults to 40%
+        
         set -l percentage $argv[1]
         if test -z "$percentage"
           set percentage 40
