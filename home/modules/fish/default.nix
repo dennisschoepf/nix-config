@@ -22,6 +22,21 @@
       '';
       fish_greeting = "fortune -a";
       ng = "nvim -c \"Neogit\"";
+      resize_images = ''
+        if not command -q convert
+          echo "Error: ImageMagick is not installed. Please install it first."
+        return 1
+
+        for img in (find . -type f -name "*.JPG")
+          set original_size (stat -f %z "$img")
+          convert "$img" -resize 40% "$img"
+          set new_size (stat -f %z "$img")
+          echo "Processed $img"
+          echo "Original size: $original_size bytes"
+          echo "New size: $new_size bytes"
+          echo "---"
+        end
+      '';
     };
 
     interactiveShellInit = ''

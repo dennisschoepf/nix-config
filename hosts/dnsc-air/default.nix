@@ -32,8 +32,6 @@
     fd
     sd
     bat
-    fortune
-    neofetch
     neovim
     just
     tldr
@@ -66,6 +64,7 @@
       "typst"
       "rsync"
       "fnm"
+      "imagemagick"
     ];
 
     casks = [

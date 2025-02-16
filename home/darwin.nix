@@ -21,4 +21,11 @@
   ];
 
   programs.home-manager.enable = true;
+
+  # User Packages
+  home.packages = with pkgs; [
+    aider-chat
+    fortune
+    neofetch
+  ];
 }
