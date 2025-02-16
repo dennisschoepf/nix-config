@@ -25,7 +25,7 @@
       resize_images = ''
         for img in (find . -type f -name "*.JPG")
           set original_size (stat -f %z "$img")
-          convert "$img" -resize 40% "$img"
+          magick convert "$img" -resize 40% "$img"
           set new_size (stat -f %z "$img")
           echo "Processed $img"
           echo "Original size: $original_size bytes"
