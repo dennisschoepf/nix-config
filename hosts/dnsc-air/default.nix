@@ -66,6 +66,7 @@
       "fnm"
       "imagemagick"
       "odin"
+      "flyctl"
     ];
 
     casks = [

@@ -29,4 +29,4 @@ mac-re:
   darwin-rebuild switch --flake .
 
 mac-up:
-  darwin-rebuild switch --recreate-lock-file --flake .
+  darwin-rebuild switch --recreate-lock-file --flake . && brew upgrade && brew upgrade --cask --greedy
