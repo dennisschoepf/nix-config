@@ -59,9 +59,6 @@
       "tree-sitter"
       "yt-dlp"
       "zoxide"
-      "pinentry"
-      "pinentry-mac"
-      "shellcheck"
       "sqlite"
       "tinymist"
       "typst"
@@ -73,6 +70,7 @@
 
     casks = [
       "zen-browser"
+      "chromium"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "mullvadvpn"
