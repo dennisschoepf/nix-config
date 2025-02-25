@@ -68,6 +68,7 @@
       "rsync"
       "fnm"
       "imagemagick"
+      "odin"
     ];
 
     casks = [
@@ -78,7 +79,6 @@
       "vlc"
       "alfred"
       "wezterm"
-      "arc"
       "hiddenbar"
       "syncthing"
       "eurkey"
@@ -108,10 +108,10 @@
         expose-group-apps = true;
         launchanim = false;
         minimize-to-application = true;
-        orientation = "left";
+        orientation = "right";
         show-recents = false;
         persistent-apps = [
-          "/Applications/Arc.app"
+          "/Applications/Zen Browser.app"
           "/Applications/WezTerm.app"
           "/Applications/Photomator.app"
           "/System/Applications/System Settings.app/"
