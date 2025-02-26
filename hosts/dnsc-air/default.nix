@@ -110,7 +110,7 @@
         orientation = "right";
         show-recents = false;
         persistent-apps = [
-          "/Applications/Zen Browser.app"
+          "/Applications/Zen.app"
           "/Applications/WezTerm.app"
           "/Applications/Photomator.app"
           "/System/Applications/System Settings.app/"
