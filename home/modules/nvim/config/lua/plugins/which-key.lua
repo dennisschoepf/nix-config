@@ -9,6 +9,7 @@ return {
     { "<leader><leader>", "<cmd>FzfLua git_files<cr>", desc = "Find git file", mode = "n" },
     { "<leader>B", "<cmd>FzfLua buffers<cr>", desc = "Opens buffers", mode = "n" },
     { "<leader>b", group = "buffer", mode = "n" },
+    { "<leader>bb", "<cmd>FzfLua buffers<cr>", desc = "Switches buffers", mode = "n" },
     { "<leader>b,", "<Cmd>BufferMovePrevious<CR>", desc = "Move buffer back", mode = "n" },
     {
       "<leader>b.",
@@ -95,7 +96,7 @@ return {
     },
     {
       "<leader>oj",
-      "<cmd>:vsplit ~/orgnzr/inbox.org | wincmd l<cr>",
+      "<cmd>:vsplit ~/orgnzr/journal.org | wincmd l<cr>",
       desc = "Open journal to the side",
       mode = "n",
     },
