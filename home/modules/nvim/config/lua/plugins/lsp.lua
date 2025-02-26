@@ -33,6 +33,7 @@ return {
       "gopls",
       "astro",
       "tinymist",
+      "ols",
     }
 
     require("mason").setup()
@@ -134,6 +135,9 @@ return {
       end,
       group = format_sync_grp,
     })
+
+    -- Odin
+    lspconfig.ols.setup({})
 
     -- LSP Keybindings
     -- Global mappings.
