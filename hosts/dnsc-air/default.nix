@@ -22,6 +22,8 @@
 
   nix.settings.trusted-users = [ "dennis" ];
 
+  nixpkgs.config.allowUnfree = true;
+
   # System Packages
   environment.systemPackages = with pkgs; [
     git
