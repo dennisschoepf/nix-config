@@ -40,7 +40,6 @@
     aider-chat
     fortune
     neofetch
-    aseprite
   ];
   
   # Homebrew
