@@ -38,6 +38,7 @@
     aider-chat
     fortune
     neofetch
+    aseprite
   ];
   
   # Homebrew
@@ -66,7 +67,6 @@
       "fnm"
       "imagemagick"
       "odin"
-      "flyctl"
     ];
 
     casks = [
