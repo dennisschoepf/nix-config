@@ -48,7 +48,8 @@ return {
       desc = "Delete all buffers",
       mode = "n",
     },
-    { "<leader>c", group = "code", mode = "n" },
+    { "<leader>c", group = "code/compile", mode = "n" },
+    { "<leader>cr", "<cmd>lua require('dnsc.compile').run()<cr>", desc = "Run current project", mode = "n" },
     { "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>", desc = "Code actions", mode = "n" },
     { "<leader>cd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Show diagnostics", mode = "n" },
     {
