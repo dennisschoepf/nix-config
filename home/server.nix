@@ -23,5 +23,10 @@
     enable = true;
     userName = "Dennis Schoepf";
     userEmail = "me@dnsc.io";
+    extraConfig = {
+      pull = {
+        rebase = true;
+      };
+    };
   };
 }
