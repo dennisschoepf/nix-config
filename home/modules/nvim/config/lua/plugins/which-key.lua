@@ -1,4 +1,4 @@
-local compile = require("dnsc.compile")
+local utils = require("dnsc.utils")
 
 return {
   "folke/which-key.nvim",
@@ -54,7 +54,7 @@ return {
     {
       "<leader>cr",
       function()
-        compile.run()
+        utils.compile_project()
       end,
       desc = "Run current project",
       mode = "n",
