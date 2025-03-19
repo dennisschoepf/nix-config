@@ -47,6 +47,7 @@
   # My user account
   users.users.dennis = {
     description = "dennis";
+    initialPassword = "admin"
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [
