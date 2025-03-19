@@ -15,6 +15,7 @@
     iftop
     just
     mmv-go
+    lazygit
   ];
 
   programs.home-manager.enable = true;
