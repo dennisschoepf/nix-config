@@ -26,6 +26,12 @@
       modules = [./hosts/dnsc-server];
     };
 
+    nixosConfigurations.dnsc-vps-sm = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      specialArgs = {inherit inputs outputs;};
+      modules = [./hosts/dnsc-vps-sm];
+    };
+
     darwinConfigurations.dnsc-air = nix-darwin.lib.darwinSystem {
       system = "aarch64-darwin";
       specialArgs = {inherit inputs outputs;};
