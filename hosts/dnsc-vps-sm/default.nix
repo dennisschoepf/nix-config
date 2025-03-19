@@ -100,7 +100,7 @@
   services.caddy = {
     enable = true;
     virtualHosts."www.dnsc.io".extraConfig = ''
-      redir https://example.com{uri}
+      redir https://dnsc.io{uri}
     '';
     virtualHosts."dnsc.io".extraConfig = ''
       encode gzip
