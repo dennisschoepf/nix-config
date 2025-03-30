@@ -98,18 +98,6 @@ return {
       mode = "n",
     },
     { "<leader>o", group = "org", mode = "n" },
-    {
-      "<leader>oi",
-      "<cmd>:vsplit ~/orgnzr/inbox.org | wincmd l<cr>",
-      desc = "Open inbox to the side",
-      mode = "n",
-    },
-    {
-      "<leader>oj",
-      "<cmd>:vsplit ~/orgnzr/journal.org | wincmd l<cr>",
-      desc = "Open journal to the side",
-      mode = "n",
-    },
     { "<leader>t", group = "diagnostics (lsp)", mode = "n" },
     {
       "<leader>td",
