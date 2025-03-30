@@ -72,7 +72,6 @@
 
     casks = [
       "zen-browser"
-      "chromium"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "mullvadvpn"
@@ -83,7 +82,6 @@
       "syncthing"
       "eurkey"
       "karabiner-elements"
-      "vial"
       "wezterm"
       "ticktick"
     ];
