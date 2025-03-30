@@ -40,6 +40,7 @@
     aider-chat
     fortune
     neofetch
+    jrnl
   ];
   
   # Homebrew
