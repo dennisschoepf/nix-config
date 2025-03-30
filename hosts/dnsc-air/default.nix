@@ -85,6 +85,7 @@
       "karabiner-elements"
       "vial"
       "wezterm"
+      "ticktick"
     ];
   };
 
