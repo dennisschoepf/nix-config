@@ -21,7 +21,6 @@
         end
       '';
       fish_greeting = "fortune -a";
-      ng = "nvim -c \"Neogit\"";
       resize_images = ''
         # Resize all JPG images in the current directory and its subdirectories
         # Usage: resize_images [percentage]
@@ -68,6 +67,7 @@
     shellAbbrs = {
       lg = "lazygit";
       g = "git";
+      j = "jrnl";
       frc = "source ~/.config/fish/**/*.fish";
     };
   };
