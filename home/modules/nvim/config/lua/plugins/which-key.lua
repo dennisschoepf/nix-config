@@ -7,6 +7,7 @@ return {
     icons = { mappings = false },
   },
   keys = {
+    { "<leader>d", "<cmd>80vsplit | VimwikiMakeDiaryNote<cr>", desc = "Open today's diary in split", mode = "n" },
     { "<leader>.", "<cmd>FzfLua files<cr>", desc = "Find file in dir", mode = "n" },
     { "<leader><leader>", "<cmd>FzfLua git_files<cr>", desc = "Find git file", mode = "n" },
     { "<leader>B", "<cmd>FzfLua buffers<cr>", desc = "Opens buffers", mode = "n" },
@@ -161,6 +162,12 @@ return {
       desc = "Split windows vertically",
       mode = "n",
     },
+    {
+      "<leader>wx",
+      "<cmd>bd<cr>",
+      desc = "Delete buffer and window",
+      mode = "n",
+    },
     { "<leader>x", group = "config", mode = "n" },
     {
       "<leader>xn",
@@ -169,7 +176,5 @@ return {
       mode = "n",
     },
     { "<leader>xr", "<cmd>source $MYVIMRC<cr>", desc = "Reload config", mode = "n" },
-    { "<leader>do", "<cmd>DiffviewOpen<cr>", desc = "Open diff view", mode = "n" },
-    { "<leader>dh", "<cmd>DiffviewFileHistory<cr>", desc = "Open file history diff", mode = "n" },
   },
 }

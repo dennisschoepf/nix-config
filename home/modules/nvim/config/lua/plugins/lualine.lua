@@ -10,11 +10,11 @@ return {
     winbar = {},
     sections = {
       lualine_a = { "mode" },
-      lualine_b = { { "filename", path = 3, color = { gui = "italic" } } },
-      lualine_c = {},
-      lualine_x = { "diagnostics", "diff" },
-      lualine_y = { "branch" },
-      lualine_z = { "location", "encoding" },
+      lualine_b = { "branch" },
+      lualine_c = { "diff" },
+      lualine_x = { "diagnostics" },
+      lualine_y = { "location" },
+      lualine_z = { "filetype" },
     },
   },
 }
