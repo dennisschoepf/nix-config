@@ -4,5 +4,10 @@ return {
   opts = {
     file_types = { "markdown", "vimwiki" },
     completions = { lsp = { enabled = true } },
+    heading = {
+      sign = false,
+      border = false,
+      position = "inline",
+    },
   },
 }
