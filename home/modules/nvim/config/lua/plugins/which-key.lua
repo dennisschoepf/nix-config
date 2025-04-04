@@ -7,7 +7,6 @@ return {
     icons = { mappings = false },
   },
   keys = {
-    { "<leader>d", "<cmd>80vsplit | VimwikiMakeDiaryNote<cr>", desc = "Open today's diary in split", mode = "n" },
     { "<leader>.", "<cmd>FzfLua files<cr>", desc = "Find file in dir", mode = "n" },
     { "<leader><leader>", "<cmd>FzfLua git_files<cr>", desc = "Find git file", mode = "n" },
     { "<leader>B", "<cmd>FzfLua buffers<cr>", desc = "Opens buffers", mode = "n" },
@@ -121,9 +120,15 @@ return {
       mode = "n",
     },
     {
-      "<leader>wd",
+      "<leader>wx",
       "<C-W>q",
       desc = "Close active window",
+      mode = "n",
+    },
+    {
+      "<leader>wx",
+      ":bd<CR>",
+      desc = "Kill active window and buffer",
       mode = "n",
     },
     {
@@ -163,7 +168,7 @@ return {
       mode = "n",
     },
     {
-      "<leader>wx",
+      "<leader>wd",
       "<cmd>bd<cr>",
       desc = "Delete buffer and window",
       mode = "n",
