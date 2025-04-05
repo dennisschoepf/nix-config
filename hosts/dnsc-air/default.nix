@@ -110,7 +110,6 @@
         orientation = "right";
         show-recents = false;
         persistent-apps = [
-          "/Applications/TickTick.app"
           "/Applications/Zen.app"
           "/Applications/WezTerm.app"
           "/System/Applications/System Settings.app/"
