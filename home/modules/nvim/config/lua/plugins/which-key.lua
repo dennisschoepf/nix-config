@@ -7,6 +7,9 @@ return {
     icons = { mappings = false },
   },
   keys = {
+    { "<leader>o", group = "open", mode = "n" },
+    { "<leader>ot", ":e ~/notes/todo.txt<cr>", desc = "Open todos", mode = "n" },
+    { "<leader>od", ":80 vsplit | :VimwikiMakeDiaryNote<cr>", desc = "Open diary note in split", mode = "n" },
     { "<leader>.", "<cmd>FzfLua files<cr>", desc = "Find file in dir", mode = "n" },
     { "<leader><leader>", "<cmd>FzfLua git_files<cr>", desc = "Find git file", mode = "n" },
     { "<leader>B", "<cmd>FzfLua buffers<cr>", desc = "Opens buffers", mode = "n" },
@@ -97,7 +100,6 @@ return {
       desc = "Search current word",
       mode = "n",
     },
-    { "<leader>o", group = "org", mode = "n" },
     { "<leader>t", group = "diagnostics (lsp)", mode = "n" },
     {
       "<leader>td",
