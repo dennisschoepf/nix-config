@@ -84,7 +84,6 @@
       "eurkey"
       "karabiner-elements"
       "wezterm"
-      "ticktick"
     ];
   };
 
