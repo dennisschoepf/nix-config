@@ -1,0 +1,6 @@
+x Set up luals
+x Set up eslint ls
+x Set up jsonls
+x Set up better (Enter vs. super-tab) keymaps for blink
+Set up keymaps for LSP
+Set up snacks picker instead of fzf

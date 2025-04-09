@@ -37,10 +37,13 @@
     neovim
     just
     tldr
-    aider-chat
     fortune
     neofetch
-    jrnl
+    stylua
+    typescript-language-server
+    vscode-langservers-extracted
+    lua-language-server
+    prettierd
   ];
   
   # Homebrew
