@@ -69,6 +69,7 @@
       "fnm"
       "imagemagick"
       "odin"
+      "todo-txt"
     ];
 
     casks = [
