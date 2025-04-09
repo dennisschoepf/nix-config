@@ -17,11 +17,11 @@ return {
         selection = {
           preselect = false,
           auto_insert = true,
-        }
-      }
+        },
+      },
     },
     signature = {
-      enabled = true
+      enabled = true,
     },
     sources = {
       default = { "lsp", "path", "snippets", "buffer" },
