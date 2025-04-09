@@ -35,6 +35,10 @@ function search_ancestors(startpath, func)
   end
 end
 
+local function escape_wildcards(path)
+  return path:gsub('([%[%]%?%*])', '\\%1')
+end
+
 function strip_archive_subpath(path)
   -- Matches regex from zip.vim / tar.vim
   path = vim.fn.substitute(path, 'zipfile://\\(.\\{-}\\)::[^\\\\].*$', '\\1', '')
