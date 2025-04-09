@@ -11,7 +11,7 @@ return {
     "typescriptreact",
     "typescript.tsx",
   },
-  root_dir = dnscUtils.root_pattern("tsconfig.json", "jsconfig.json", "package.json", ".git"),
+  root_markers = { "tsconfig.json", "package.json", ".git" },
   init_options = {
     preferences = {
       importModuleSpecifierPreference = "relative",
