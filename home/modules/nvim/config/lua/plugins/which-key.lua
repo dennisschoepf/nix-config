@@ -10,11 +10,7 @@ return {
     { "<leader>o", group = "open", mode = "n" },
     { "<leader>ot", ":e ~/notes/todo.txt<cr>", desc = "Open todos", mode = "n" },
     { "<leader>od", ":80 vsplit | :VimwikiMakeDiaryNote<cr>", desc = "Open diary note in split", mode = "n" },
-    { "<leader>.", "<cmd>FzfLua files<cr>", desc = "Find file in dir", mode = "n" },
-    { "<leader><leader>", "<cmd>FzfLua git_files<cr>", desc = "Find git file", mode = "n" },
-    { "<leader>B", "<cmd>FzfLua buffers<cr>", desc = "Opens buffers", mode = "n" },
     { "<leader>b", group = "buffer", mode = "n" },
-    { "<leader>bb", "<cmd>FzfLua buffers<cr>", desc = "Switches buffers", mode = "n" },
     { "<leader>b,", "<Cmd>BufferMovePrevious<CR>", desc = "Move buffer back", mode = "n" },
     {
       "<leader>b.",
@@ -62,14 +58,6 @@ return {
       desc = "Run current project",
       mode = "n",
     },
-    { "<leader>ca", "<cmd>FzfLua lsp_code_actions<cr>", desc = "Code actions", mode = "n" },
-    { "<leader>cd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Show diagnostics", mode = "n" },
-    {
-      "<leader>cf",
-      "<cmd>FzfLua lsp_references<cr>",
-      desc = "Show references",
-      mode = "n",
-    },
     {
       "<leader>q",
       "<cmd>wq<cr>",
@@ -83,7 +71,6 @@ return {
       desc = "Create a new file",
       mode = "n",
     },
-    { "<leader>fr", "<cmd>FzfLua oldfiles<cr>", desc = "Open Recent File", mode = "n" },
     {
       "<leader>fs",
       "<cmd>w<cr>",
@@ -92,21 +79,7 @@ return {
     },
     { "<leader>q", "<cmd>qa!<cr>", desc = "Leave neovim", mode = "n" },
     { "<leader>s", group = "search", mode = "n" },
-    { "<leader>ss", "<cmd>FzfLua live_grep_native<CR>", desc = "Live Grep", mode = "n" },
-    { "<leader>sp", "<cmd>FzfLua grep_project<CR>", desc = "Grep in project", mode = "n" },
-    {
-      "<leader>sw",
-      "<cmd>FzfLua grep_cword<cr>",
-      desc = "Search current word",
-      mode = "n",
-    },
     { "<leader>t", group = "diagnostics (lsp)", mode = "n" },
-    {
-      "<leader>td",
-      "<cmd>FzfLua diagnostics_document<cr>",
-      desc = "Show LSP diagnostics",
-      mode = "n",
-    },
     { "<leader>ta", "<cmd>TodoQuickFix<cr>", desc = "Show all todo comments", mode = "n" },
     { "<leader>w", group = "window", mode = "n" },
     {

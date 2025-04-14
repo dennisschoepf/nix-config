@@ -1,7 +1,7 @@
-x Set up luals
+x 2025-04-12 2025-03-01 Set up luals +config @home due:2025-05-01
 x Set up eslint ls
 x Set up jsonls
 x Set up better (Enter vs. super-tab) keymaps for blink
-Set up keymaps for LSP
-Set up snacks picker instead of fzf
+x Set up keymaps for LSP
+x Set up snacks picker instead of fzf
 Set up lua dev environment
