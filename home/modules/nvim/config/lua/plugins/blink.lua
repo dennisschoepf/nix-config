@@ -14,8 +14,6 @@ return {
     appearance = {
       nerd_font_variant = "mono",
     },
-    -- (Default) Only show the documentation popup when manually triggered
-    -- C-k: Toggle signature help (if signature.enabled = true)
     completion = {
       documentation = { auto_show = false },
       list = {
@@ -29,10 +27,15 @@ return {
       enabled = true,
     },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer" },
+      default = { "lazydev", "lsp", "path", "snippets", "buffer" },
       per_filetype = { sql = { "dadbod" } },
       providers = {
         dadbod = { module = "vim_dadbod_completion.blink" },
+        lazydev = {
+          name = "LazyDev",
+          module = "lazydev.integrations.blink",
+          score_offset = 100,
+        },
       },
     },
     fuzzy = { implementation = "prefer_rust_with_warning" },

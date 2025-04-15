@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local opts = { buffer = args.buf }
 
     vim.keymap.set("n", "<C-Space>", "<C-x><C-o>", opts)
-    vim.keymap.set("n", "<Space>e", "vim.diagnostic.open_float()", opts)
+    vim.keymap.set("n", "<Space>e", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
     vim.keymap.set("n", "<Space>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
   end,
 })
