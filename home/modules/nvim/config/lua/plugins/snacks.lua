@@ -58,7 +58,7 @@ return {
     { "<leader>td", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
     { "<leader>ta", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
     -- LSP
-    { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
+    { "gd", function() Snacks.picker.lsp_definitions({ filter = { paths = { ["react/ts5.0"] = false } } }) end, desc = "Goto Definition" },
     { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
     { "grr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
     { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
