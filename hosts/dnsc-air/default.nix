@@ -88,6 +88,7 @@
       "eurkey"
       "karabiner-elements"
       "wezterm"
+      "bitwarden"
     ];
   };
 
