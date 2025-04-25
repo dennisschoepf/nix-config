@@ -118,7 +118,7 @@
       root * /var/www/slides
     '';
     virtualHosts."vault.dnsc.io".extraConfig = ''
-      reverse_proxy 127.0.0.1:8222
+      reverse_proxy localhost:8222
     '';
   };
 
