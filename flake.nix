@@ -17,6 +17,7 @@
     nixpkgs,
     home-manager,
     nix-darwin,
+    agenix,
     ...
   } @ inputs: let
     inherit (self) outputs;
