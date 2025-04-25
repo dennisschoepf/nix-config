@@ -114,7 +114,13 @@
 
       root * /var/www/slides
     '';
+    virtualHosts."vault.dnsc.io".extraConfig = ''
+      reverse_proxy :8000
+    '';
   };
+
+  # Vaultwarden
+  services.vaultwarden.enable = true;
 
   # Environment variables
   environment.variables.EDITOR = "nvim";
