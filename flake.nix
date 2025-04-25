@@ -2,6 +2,7 @@
   description = "dnsc-server NixOS flake";
 
   inputs = {
+    inputs.agenix.url = "github:ryantm/agenix";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -29,7 +30,10 @@
     nixosConfigurations.dnsc-vps-sm = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {inherit inputs outputs;};
-      modules = [./hosts/dnsc-vps-sm];
+      modules = [
+          ./hosts/dnsc-vps-sm
+          agenix.nixosModules.default
+      ];
     };
 
     darwinConfigurations.dnsc-air = nix-darwin.lib.darwinSystem {
