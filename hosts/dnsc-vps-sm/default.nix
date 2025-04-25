@@ -102,7 +102,7 @@
   # Vaultwarden
   services.vaultwarden = {
     enable = true;
-    environmentFile = config.age.secrets.vaultwardenEnv.age.path;
+    environmentFile = config.age.secrets."vaultwarden/env".path;
   };
 
   # Caddy
