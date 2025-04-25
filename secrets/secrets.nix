@@ -6,6 +6,7 @@ let
 in
 {
   # Add like this: "secret1.age".publicKeys = systems;
+  "vaultwarden/env.age".publicKeys = systems;
 }
 
 # 1. Create a file with secret
