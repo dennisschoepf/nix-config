@@ -13,7 +13,7 @@
   ];
 
   # Secrets
-  age.secrets.vaultwardenEnv.file = ../secrets/vaultwarden/env.age;
+  age.secrets."vaultwarden/env".file = ../../secrets/vaultwarden/env.age;
 
   # Generated automatically
   boot.tmp.cleanOnBoot = true;
