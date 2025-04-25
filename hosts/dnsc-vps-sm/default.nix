@@ -108,6 +108,14 @@
     environmentFile = config.age.secrets."vaultwarden/env".path;
   };
 
+  # Uptime Kuma
+  services.uptime-kuma = {
+    enable = true;
+    settings = {
+      PORT = "9000";
+    };
+  };
+
   # Caddy
   services.caddy = {
     enable = true;
