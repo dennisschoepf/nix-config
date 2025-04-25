@@ -137,6 +137,9 @@
     virtualHosts."vault.dnsc.io".extraConfig = ''
       reverse_proxy localhost:8222
     '';
+    virtualHosts."uptime.dnsc.io".extraConfig = ''
+      reverse_proxy localhost:9000
+    '';
   };
 
   # Environment variables
