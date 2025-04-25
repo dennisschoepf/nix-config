@@ -13,7 +13,10 @@
   ];
 
   # Secrets
-  age.secrets."vaultwarden/env".file = ../../secrets/vaultwarden/env.age;
+  age = {
+    identityPaths = [ "${config.users.users.dennis.home}/.ssh/id_ed25519" ]
+    secrets."vaultwarden/env".file = ../../secrets/vaultwarden/env.age;
+  };
 
   # Generated automatically
   boot.tmp.cleanOnBoot = true;
