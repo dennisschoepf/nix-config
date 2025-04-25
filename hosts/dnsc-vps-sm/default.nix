@@ -96,6 +96,9 @@
   # Tailscale
   services.tailscale.enable = true;
 
+  # Vaultwarden
+  services.vaultwarden.enable = true;
+
   # Caddy
   services.caddy = {
     enable = true;
@@ -115,12 +118,9 @@
       root * /var/www/slides
     '';
     virtualHosts."vault.dnsc.io".extraConfig = ''
-      reverse_proxy :8000
+      reverse_proxy :8222
     '';
   };
-
-  # Vaultwarden
-  services.vaultwarden.enable = true;
 
   # Environment variables
   environment.variables.EDITOR = "nvim";
