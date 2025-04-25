@@ -12,6 +12,9 @@
     inputs.home-manager.nixosModules.home-manager
   ];
 
+  # Secrets
+  age.secrets.vaultwardenEnv.file = ../secrets/vaultwarden/env.age;
+
   # Generated automatically
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
@@ -97,7 +100,10 @@
   services.tailscale.enable = true;
 
   # Vaultwarden
-  services.vaultwarden.enable = true;
+  services.vaultwarden = {
+    enable = true;
+    environmentFile = config.age.secrets.vaultwardenEnv.age.path;
+  };
 
   # Caddy
   services.caddy = {
