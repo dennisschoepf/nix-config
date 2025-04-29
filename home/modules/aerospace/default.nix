@@ -46,6 +46,16 @@
         alt-tab = "workspace-back-and-forth";
         alt-shift-tab = "move-workspace-to-monitor --wrap-around next";
       };
+      on-window-detected = [
+        {
+          "if".app-id = "app.zen-browser.zen";
+          run = "move-node-to-workspace 1";
+        }
+        {
+          "if".app-id = "com.github.wez.wezterm";
+          run = "move-node-to-workspace 2";
+        }
+      ];
     };
   };
 }
