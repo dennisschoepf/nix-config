@@ -1,7 +1,7 @@
 ---@module 'snacks'
 
 local filter_lsp_definitions = function(item)
-  if item.file:match("/react/ts5.0/") then
+  if item.file:match("/react/ts5.0/") or item.file:match("react.d.ts") then
     return false
   end
 
