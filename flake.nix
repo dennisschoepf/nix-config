@@ -42,5 +42,11 @@
       specialArgs = {inherit inputs outputs;};
       modules = [./hosts/dnsc-air];
     };
+
+    homeConfigurations."dnsc-deck" = home-manager.lib.homeManagerConfiguration {
+        specialArgs = {inherit inputs outputs;};
+        modules = [ ./home/deck.nix ];
+      };
+    };
   };
 }

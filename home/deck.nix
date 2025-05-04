@@ -1,0 +1,47 @@
+{ config, pkgs, ... }:
+
+{
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+  
+  nixpkgs = {
+  	config = {
+    	allowUnfree = true;
+    	allowUnfreePredicate = (_: true);
+    };
+  };
+
+  home.username = "dennis";
+  home.homeDirectory = "/home/dennis";
+  home.stateVersion = "24.11";
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+
+  home.packages = with pkgs; [
+    git
+    nvim
+    neofetch
+    zip
+    unzip
+    ripgrep
+    fzf
+    just
+    lazygit
+  ];
+
+  xdg.enable = true;
+
+  imports = [
+    ./modules/git
+    ./modules/fish
+    ./modules/wezterm
+    ./modules/nvim
+    ./modules/lazygit
+  ];
+
+  programs.home-manager.enable = true;
+}
