@@ -6,10 +6,10 @@ x Set up keymaps for LSP
 x Set up snacks picker instead of fzf
 x 2025-05-06 Set up lua dev environment
 x 2025-05-06 Steam deck install Nix https://github.com/DeterminateSystems/nix-installer?tab=readme-ov-file
+x 2025-05-06 2025-05-04 which-key Neovim Config fixen +neovim
+x 2025-05-06 2025-05-04 which-key mappings in keymaps.lua mit descriptions +neovim
+x 2025-05-06 2025-05-04 substitute.nvim konfigurieren +neovim
 2025-05-06 Steam deck install Tailscale https://github.com/tailscale-dev/deck-tailscale +deck
 2025-05-06 Steam Deck nix build fixen +deck
 2025-04-25 Backup einrichten für Vaultwarden (https://www.arthurkoziel.com/restic-backups-b2-nixos/, https://github.com/dani-garcia/vaultwarden/wiki/General-%28not-docker%29) +homelab
 2025-04-26 IP Access restricten für dnsc-vps-sm (https://github.com/Oak-Digital/nixos-ip-whitelist-firewall) +homelab
-x 2025-05-06 2025-05-04 which-key Neovim Config fixen +neovim
-2025-05-04 which-key mappings in keymaps.lua mit descriptions +neovim
-2025-05-04 substitute.nvim konfigurieren +neovim
