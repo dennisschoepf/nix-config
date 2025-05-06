@@ -45,6 +45,7 @@
     lua-language-server
     prettierd
     atuin
+    nil
   ];
   
   # Homebrew
