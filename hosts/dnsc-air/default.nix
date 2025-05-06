@@ -60,7 +60,7 @@
       "homebrew/services"
     ];
     
-    masApps = {}
+    masApps = {};
 
     brews = [
       "mas"
