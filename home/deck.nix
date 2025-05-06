@@ -31,6 +31,9 @@
     fzf
     just
     lazygit
+    fortune
+    zoxide
+    atuin
   ];
 
   xdg.enable = true;
@@ -39,7 +42,7 @@
     ./modules/git
     ./modules/fish
     ./modules/atuin
-    ./modules/nvim
+    ./modules/nvim/deck.nix
     ./modules/lazygit
   ];
 
