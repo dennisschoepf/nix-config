@@ -13,8 +13,8 @@
     };
   };
 
-  home.username = "dennis";
-  home.homeDirectory = "/home/dennis";
+  home.username = "deck";
+  home.homeDirectory = "/home/deck";
   home.stateVersion = "24.11";
 
   home.sessionVariables = {
