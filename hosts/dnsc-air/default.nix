@@ -44,6 +44,7 @@
     vscode-langservers-extracted
     lua-language-server
     prettierd
+    atuin
   ];
   
   # Homebrew
@@ -58,8 +59,11 @@
     taps = [
       "homebrew/services"
     ];
+    
+    masApps = {}
 
     brews = [
+      "mas"
       "lazygit"
       "ffmpeg"
       "tree-sitter"
@@ -88,7 +92,6 @@
       "eurkey"
       "karabiner-elements"
       "wezterm"
-      "bitwarden"
     ];
   };
 
