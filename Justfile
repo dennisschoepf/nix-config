@@ -33,4 +33,4 @@ mac-up:
 
 # dnsc-deck
 deck-re:
-  nix run home-manager/master -- switch flake .#dnsc-deck
+  nix run home-manager/master -- switch --flake .#dnsc-deck
