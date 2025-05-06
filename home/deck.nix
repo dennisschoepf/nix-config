@@ -23,7 +23,7 @@
 
   home.packages = with pkgs; [
     git
-    nvim
+    neovim
     neofetch
     zip
     unzip
