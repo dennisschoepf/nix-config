@@ -15,6 +15,7 @@
   imports = [
     ./modules/git
     ./modules/fish
+    ./modules/atuin
     ./modules/wezterm
     ./modules/nvim
     ./modules/lazygit
