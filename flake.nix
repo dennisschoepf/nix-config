@@ -45,6 +45,7 @@
       };
 
       homeConfigurations."dnsc-deck" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages;
         specialArgs = {inherit inputs outputs;};
         modules = [ ./home/deck.nix ];
       };
