@@ -30,3 +30,7 @@ mac-re:
 
 mac-up:
   darwin-rebuild switch --recreate-lock-file --flake . && brew upgrade && brew upgrade --cask --greedy
+
+# dnsc-deck
+deck-re:
+  nix run home-manager/master -- switch flake .#dnsc-deck
