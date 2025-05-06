@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ./networking.nix
     inputs.home-manager.nixosModules.home-manager
+    inputs.ip-whitelist.nixosModules.default
   ];
 
   # Secrets
@@ -44,11 +45,24 @@
   systemd.services.NetworkManager-wait-online.enable = false;
 
   # Firewall
-  networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [
-    80 
-    443
-  ];
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [
+      80 
+      443
+    ];
+    ipBasedAllowedTCPPorts = [
+      {
+        port = 22;
+        ips = [
+          "100.103.199.4"
+          "100.115.100.87"
+          "100.83.40.63"
+        ];
+      }
+    ];
+  };
+  
 
   # My user account
   users.users.dennis = {

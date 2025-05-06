@@ -10,6 +10,7 @@
     };
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    ip-whitelist.url = "github:Oak-Digital/nixos-ip-whitelist-firewall";
   };
 
   outputs = {
