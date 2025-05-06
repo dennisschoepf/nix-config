@@ -34,6 +34,8 @@
     fortune
     zoxide
     atuin
+    fnm
+    gcc
   ];
 
   xdg.enable = true;
