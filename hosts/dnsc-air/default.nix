@@ -60,7 +60,9 @@
       "homebrew/services"
     ];
     
-    masApps = {};
+    masApps = {
+      Bitwarden = 1352778147;
+    };
 
     brews = [
       "mas"
