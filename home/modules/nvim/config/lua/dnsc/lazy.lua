@@ -15,11 +15,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = { noremap = true, silent = true, expr = true }
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.keymap.set("", "<Space>", "<Nop>", opts)
 
 local options = {
   backup = false, -- creates a backup file

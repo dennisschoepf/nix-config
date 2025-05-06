@@ -13,9 +13,17 @@ vim.diagnostic.config({
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
-    local opts = { buffer = args.buf }
-
-    vim.keymap.set("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
-    vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+    vim.keymap.set(
+      "n",
+      "<leader>e",
+      "<cmd>lua vim.diagnostic.open_float()<cr>",
+      { buffer = args.buf, desc = "Show diagnostics on current line" }
+    )
+    vim.keymap.set(
+      "n",
+      "<leader>ca",
+      "<cmd>lua vim.lsp.buf.code_action()<cr>",
+      { buffer = args.buf, desc = "Code actions for current line" }
+    )
   end,
 })
