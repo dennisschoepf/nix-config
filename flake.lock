@@ -84,6 +84,24 @@
         "type": "github"
       }
     },
+    "ip-whitelist": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1733315147,
+        "narHash": "sha256-maBv+DuS0e0xuO+lh1WebUg8YkHL1jnafrmCPLrd2D0=",
+        "owner": "Oak-Digital",
+        "repo": "nixos-ip-whitelist-firewall",
+        "rev": "14e3346cc015d370b00a16b790a1c323b985ff63",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Oak-Digital",
+        "repo": "nixos-ip-whitelist-firewall",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -123,6 +141,18 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-US1tAChvPxT52RV8GksWZS415tTS7PV42KTc2PNDBmc=",
+        "path": "/nix/store/aa0zsahvyqnvzkicsh29jirm9hwv95pg-source",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1746397377,
         "narHash": "sha256-5oLdRa3vWSRbuqPIFFmQBGGUqaYZBxX+GGtN9f/n4lU=",
         "owner": "NixOS",
@@ -141,8 +171,9 @@
       "inputs": {
         "agenix": "agenix",
         "home-manager": "home-manager_2",
+        "ip-whitelist": "ip-whitelist",
         "nix-darwin": "nix-darwin",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       }
     },
     "systems": {
