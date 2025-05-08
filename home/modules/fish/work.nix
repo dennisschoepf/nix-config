@@ -49,6 +49,9 @@
     interactiveShellInit = ''
       fish_config theme choose "Rosé Pine"
 
+      set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home 
+      set -gx ANDROID_HOME /Users/dennis/Library/Android/sdk
+
       set hn (prompt_hostname)
       set fish_cursor_default     block      blink
       set fish_cursor_insert      line       blink
@@ -59,6 +62,8 @@
 
       fish_add_path /run/current-system/sw/bin
       fish_add_path /opt/homebrew/bin
+      fish_add_path $ANDROID_HOME/emulator
+      fish_add_path $ANDROID_HOME/platform-tools
 
       envsource ~/.env
 
