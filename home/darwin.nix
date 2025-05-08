@@ -19,7 +19,6 @@
     ./modules/wezterm
     ./modules/nvim
     ./modules/lazygit
-    ./modules/jrnl
   ];
 
   programs.home-manager.enable = true;

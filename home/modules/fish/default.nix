@@ -67,7 +67,6 @@
     shellAbbrs = {
       lg = "lazygit";
       g = "git";
-      j = "jrnl";
       frc = "source ~/.config/fish/**/*.fish";
       t = "todo.sh";
     };
