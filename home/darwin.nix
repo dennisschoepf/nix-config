@@ -13,6 +13,7 @@
   xdg.enable = true;
 
   imports = [
+    ./modules/ssh
     ./modules/git
     ./modules/fish
     ./modules/atuin

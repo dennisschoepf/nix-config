@@ -3,6 +3,9 @@
     enable = true;
 
     functions = {
+      # TODO: Add these two functions from work config
+      cdr = '''';
+      rr = '''';
       ff = ''
         set RG_PREFIX "rg --column --line-number --no-heading --color=always --smart-case "
         set INITIAL_QUERY "$argv"
@@ -49,9 +52,6 @@
     interactiveShellInit = ''
       fish_config theme choose "Rosé Pine"
 
-      set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home 
-      set -gx ANDROID_HOME /Users/dennis/Library/Android/sdk
-
       set hn (prompt_hostname)
       set fish_cursor_default     block      blink
       set fish_cursor_insert      line       blink
@@ -74,8 +74,14 @@
     shellAbbrs = {
       lg = "lazygit";
       g = "git";
+      gco = "git checkout";
       frc = "source ~/.config/fish/**/*.fish";
       t = "todo.sh";
+      p = "pnpm";
+      pa = "pnpm add";
+      pad = "pnpm add -D";
+      pi = "pnpm install";
+      px = "pnpm dlx";
     };
   };
 

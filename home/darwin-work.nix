@@ -8,6 +8,8 @@
   home.sessionVariables = {
     EDITOR = "nvim";
     GOPATH = "$HOME/go";
+    JAVA_HOME = "/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home"; 
+    ANDROID_HOME = "$HOME/Library/Android/sdk";
   };
 
   xdg.enable = true;
