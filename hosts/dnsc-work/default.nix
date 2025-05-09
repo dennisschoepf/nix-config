@@ -20,8 +20,6 @@
     description = "Dennis Schoepf";
   };
 
-  nix.settings.trusted-users = [ "dennis" ];
-
   nixpkgs.config.allowUnfree = true;
 
   # System Packages
@@ -174,11 +172,5 @@
 
   # Nix settings
   # Enable new Nix CLI and flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  nix.package = pkgs.nix;
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 1w";
-  };
+  nix.enable = false;
 }
