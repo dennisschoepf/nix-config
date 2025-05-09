@@ -44,6 +44,12 @@
         modules = [./hosts/dnsc-air];
       };
 
+      darwinConfigurations.dnsc-work = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/dnsc-work];
+      };
+
       homeConfigurations."dnsc-deck" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [ ./home/deck.nix ];
