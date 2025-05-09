@@ -73,6 +73,7 @@
       "imagemagick"
       "todo-txt"
       "watchman"
+      "pnpm"
     ];
 
     casks = [
