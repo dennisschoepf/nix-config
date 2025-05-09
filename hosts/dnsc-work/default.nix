@@ -49,17 +49,12 @@
   # Homebrew
   homebrew = {
     enable = true;
-    brewfile = true;
 
     onActivation = {
       autoUpdate = false;
       cleanup = "zap";
     };
 
-    taps = [
-      "homebrew/services"
-    ];
-    
     masApps = {
       Bitwarden = 1352778147;
       XCode = 497799835;
@@ -83,7 +78,7 @@
     casks = [
       "arc"
       "microsoft-teams"
-      "zen-browser"
+      "tailscale"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "vlc"
@@ -172,6 +167,6 @@
   };
 
   # Nix settings
-  # Enable new Nix CLI and flakes
+  # Use determinate systems
   nix.enable = false;
 }
