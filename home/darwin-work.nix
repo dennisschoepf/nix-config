@@ -2,9 +2,8 @@
 
 {
   home.username = "dennis";
-  home.homeDirectory = "/Users/dennis";
   home.stateVersion = "24.11";
-
+  home.homeDirectory = "/Users/dennis";
   home.sessionVariables = {
     EDITOR = "nvim";
     GOPATH = "$HOME/go";
@@ -16,7 +15,7 @@
 
   imports = [
     ./modules/git
-    ./modules/fish/work
+    ./modules/fish/work.nix
     ./modules/atuin
     ./modules/wezterm
     ./modules/nvim
