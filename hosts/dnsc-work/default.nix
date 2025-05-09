@@ -49,6 +49,7 @@
   # Homebrew
   homebrew = {
     enable = true;
+    brewfile = true;
 
     onActivation = {
       autoUpdate = false;
