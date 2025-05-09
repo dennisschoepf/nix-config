@@ -74,6 +74,15 @@
       "todo-txt"
       "watchman"
       "pnpm"
+      "pkg-config"
+      "cairo"
+      "pango"
+      "libpng"
+      "jpeg"
+      "giflib"
+      "librsvg"
+      "pixman"
+      "python-setuptools"
     ];
 
     casks = [
