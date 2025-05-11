@@ -1,11 +1,57 @@
-{
-  programs.fish = {
+{ programs.fish = {
     enable = true;
 
     functions = {
-      # TODO: Add these two functions from work config
-      cdr = '''';
-      rr = '''';
+      cdr = ''
+        set folder (begin
+            fd . ~/dev/ride/apps/backend/edge-services -t d -d 1;
+            fd . ~/dev/ride/apps/backend/backend-services -t d -d 1;
+            fd . ~/dev/ride/apps/backend/backend-services/tariff-service -t d -d 1;
+            fd . ~/dev/ride/apps/backend/backend-services/wallet-service -t d -d 1;
+            fd . ~/dev/ride/apps/frontend/projects -t d -d 1;
+            fd . ~/dev/ride/apps/native -t d -d 1;
+            fd . ~/dev/ride/packages -t d -d 1;
+            echo "$HOME/dev/ride/apps/frontend";
+            echo "$HOME/dev/ride/apps/lib";
+            echo "$HOME/dev/ride";
+        end | fzf);
+        set service (basename $folder)
+
+        cd $folder
+      '';
+      rr = ''
+        set folder (begin
+            fd . ~/dev/ride/apps/backend/edge-services -t d -d 1;
+            fd . ~/dev/ride/apps/backend/backend-services -t d -d 1;
+            fd . ~/dev/ride/apps/backend/backend-services/tariff-service -t d -d 1;
+            fd . ~/dev/ride/apps/backend/backend-services/wallet-service -t d -d 1;
+            fd . ~/dev/ride/apps/frontend/projects -t d -d 1;
+            fd . ~/dev/ride/apps/native -t d -d 1;
+            echo "$HOME/dev/ride/apps/frontend";
+            echo "$HOME/dev/ride/apps/lib";
+            echo "$HOME/dev/ride";
+        end | fzf);
+        
+        if test -n "$folder"
+            set service (basename $folder)
+            cd $folder
+            
+            # Check if package.json exists
+            if test -f "package.json"
+                # Extract and format npm scripts for fzf
+                set script_cmd (jq -r '.scripts | to_entries | .[] | "\(.key): \(.value)"' package.json | fzf)
+                
+                if test -n "$script_cmd"
+                    # Extract just the script name before the colon
+                    set script_name (string split ": " $script_cmd)[1]
+                    if test -n "$script_name"
+                        echo "Running: npm run $script_name"
+                        npm run $script_name
+                    end
+                end
+            end
+        end
+      '';
       ff = ''
         set RG_PREFIX "rg --column --line-number --no-heading --color=always --smart-case "
         set INITIAL_QUERY "$argv"

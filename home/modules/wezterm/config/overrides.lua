@@ -5,8 +5,9 @@ local helpers = require("helpers")
 local M = {}
 
 function M.apply_to_config(config)
-	--if hn == "macbook.digital-h.de" then
-	--end
+	if hn == "dnsc-work" then
+		config.window_background_opacity = 0.9
+	end
 
 	if hn == "dnsc-desktop" then
 		config.font = wezterm.font("Victor Mono", { weight = "DemiBold" })

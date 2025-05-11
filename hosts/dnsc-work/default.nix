@@ -20,8 +20,6 @@
     description = "Dennis Schoepf";
   };
 
-  nix.settings.trusted-users = [ "dennis" ];
-
   nixpkgs.config.allowUnfree = true;
 
   # System Packages
@@ -57,10 +55,6 @@
       cleanup = "zap";
     };
 
-    taps = [
-      "homebrew/services"
-    ];
-    
     masApps = {
       Bitwarden = 1352778147;
       XCode = 497799835;
@@ -79,12 +73,22 @@
       "imagemagick"
       "todo-txt"
       "watchman"
+      "pnpm"
+      "pkg-config"
+      "cairo"
+      "pango"
+      "libpng"
+      "jpeg"
+      "giflib"
+      "librsvg"
+      "pixman"
+      "python-setuptools"
     ];
 
     casks = [
       "arc"
       "microsoft-teams"
-      "zen-browser"
+      "tailscale"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "vlc"
@@ -173,12 +177,6 @@
   };
 
   # Nix settings
-  # Enable new Nix CLI and flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  nix.package = pkgs.nix;
-  nix.gc = {
-    automatic = true;
-    options = "--delete-older-than 1w";
-  };
+  # Use determinate systems
+  nix.enable = false;
 }
