@@ -42,8 +42,8 @@ function M.apply_to_config(config)
 			}),
 		},
 		{
-			key = "L",
-			mods = "CTRL|SHIFT",
+			key = "X",
+			mods = "CTRL",
 			action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
 		},
 		-- Navigation
