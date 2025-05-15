@@ -8,8 +8,7 @@
             fd . ~/dev/ride/apps/backend/backend-services -t d -d 1;
             fd . ~/dev/ride/apps/frontend/projects -t d -d 1;
             fd . ~/dev/ride/apps/native -t d -d 1;
-            # Enable as soon as we have packages
-            # fd . ~/dev/ride/packages -t d -d 1;
+            fd . ~/dev/ride/packages -t d -d 1;
             echo "$HOME/dev/ride/apps/frontend";
             echo "$HOME/dev/ride/apps/lib";
             echo "$HOME/dev/ride";
