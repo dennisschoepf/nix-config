@@ -41,6 +41,11 @@ function M.apply_to_config(config)
 				mode = "SwapWithActive",
 			}),
 		},
+		{
+			key = "L",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+		},
 		-- Navigation
 		helpers.split_nav("move", "h"),
 		helpers.split_nav("move", "j"),
