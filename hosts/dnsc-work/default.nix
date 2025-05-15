@@ -8,7 +8,7 @@
 }: {
   imports = [
     inputs.home-manager.darwinModules.home-manager
-    ../../home/modules/aerospace
+    ../../home/modules/aerospace/work.nix
   ];
 
   # Setting the user
@@ -102,6 +102,7 @@
       "1password"
       "android-studio"
       "zulu@17"
+      "postman"
     ];
   };
 
@@ -130,6 +131,7 @@
         persistent-apps = [
           "/Applications/Arc.app"
           "/Applications/WezTerm.app"
+          "/Applications/Microsoft Teams.app"
           "/System/Applications/System Settings.app/"
         ];
         persistent-others = [
