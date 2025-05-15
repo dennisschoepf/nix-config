@@ -103,6 +103,7 @@
       "android-studio"
       "zulu@17"
       "postman"
+      "docker"
     ];
   };
 
