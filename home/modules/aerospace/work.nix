@@ -56,6 +56,14 @@
           run = "move-node-to-workspace 2";
         }
         {
+          "if".app-id = "com.postmanlabs.mac";
+          run = "move-node-to-workspace 3";
+        }
+        {
+          "if".app-id = "com.apple.dt.Xcode";
+          run = "move-node-to-workspace 3";
+        }
+        {
           "if".app-id = "com.microsoft.teams2";
           run = "move-node-to-workspace 5";
         }
