@@ -20,13 +20,7 @@
         "6" = "secondary";
       };
       mode.main.binding = {
-        alt-h = "focus left";
-        alt-j = "focus down";
-        alt-k = "focus up";
-        alt-l = "focus right";
         alt-shift-h = "move left";
-        alt-shift-j = "move down";
-        alt-shift-k = "move up";
         alt-shift-l = "move right";
         alt-comma = "layout tiles horizontal vertical";
         alt-period = "layout accordion horizontal vertical";

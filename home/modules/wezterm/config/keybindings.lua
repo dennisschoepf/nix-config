@@ -42,10 +42,14 @@ function M.apply_to_config(config)
 			}),
 		},
 		-- Navigation
-		helpers.move_pane("j", "Down"),
-		helpers.move_pane("k", "Up"),
-		helpers.move_pane("h", "Left"),
-		helpers.move_pane("l", "Right"),
+		helpers.split_nav("move", "h"),
+		helpers.split_nav("move", "j"),
+		helpers.split_nav("move", "k"),
+		helpers.split_nav("move", "l"),
+		helpers.split_nav("resize", "h"),
+		helpers.split_nav("resize", "j"),
+		helpers.split_nav("resize", "k"),
+		helpers.split_nav("resize", "l"),
 		-- Workspaces
 		{
 			key = "s",
