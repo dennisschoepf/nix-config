@@ -83,6 +83,7 @@
       "librsvg"
       "pixman"
       "python-setuptools"
+      "rbenv"
     ];
 
     casks = [
