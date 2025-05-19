@@ -175,6 +175,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
     users = {
       dennis = import ../../home/darwin-work.nix;
     };
