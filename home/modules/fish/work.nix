@@ -138,18 +138,6 @@
       pi = "pnpm install";
       px = "pnpm dlx";
     };
-
-    plugins = [
-      {
-         name = "pnpm-shell-completion";
-           src = pkgs.fetchFromGitHub {
-             owner = "g-plane";
-             repo = "pnpm-shell-completion";
-             rev = "v0.5.4";
-             hash = "sha256-bc2ZVHQF+lSAmhy/fvdiVfg9uzPPcXYrtiNChjkjHtA=";
-           };
-      }
-    ];
   };
 
   home.file.".config/fish/themes".source = ./themes;
