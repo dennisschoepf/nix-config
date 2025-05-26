@@ -90,7 +90,7 @@
     casks = [
       "arc"
       "microsoft-teams"
-      "tailscale"
+      # "tailscale"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "vlc"
