@@ -118,6 +118,7 @@
       fish_add_path /opt/homebrew/bin
       fish_add_path $ANDROID_HOME/emulator
       fish_add_path $ANDROID_HOME/platform-tools
+      fish_add_path $HOME/.config/fish/plugins
 
       envsource ~/.env
 
