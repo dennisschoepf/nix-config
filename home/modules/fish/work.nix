@@ -146,7 +146,7 @@
            owner = "g-plane";
            repo = "pnpm-shell-completion";
            rev = "v0.5.4";
-           sha256 = "e34eefb80400d1cd2a7e787cf47f0b48bdf767fa";
+           sha512 = "e34eefb80400d1cd2a7e787cf47f0b48bdf767fa";
          };
       }
     ];
