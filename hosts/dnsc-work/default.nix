@@ -44,6 +44,7 @@
     prettierd
     atuin
     nil
+    nurl
   ];
   
   # Homebrew

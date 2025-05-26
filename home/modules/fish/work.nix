@@ -139,17 +139,17 @@
       px = "pnpm dlx";
     };
 
-    plugins = [
-      {
-         name = "pnpm-shell-completion";
-         src = pkgs.fetchFromGitHub {
-           owner = "g-plane";
-           repo = "pnpm-shell-completion";
-           rev = "v0.5.4";
-           sha512 = "e34eefb80400d1cd2a7e787cf47f0b48bdf767fa";
-         };
-      }
-    ];
+    # plugins = [
+    #   {
+    #      name = "pnpm-shell-completion";
+    #      src = pkgs.fetchFromGitHub {
+    #        owner = "g-plane";
+    #        repo = "pnpm-shell-completion";
+    #        rev = "v0.5.4";
+    #        sha512 = "e34eefb80400d1cd2a7e787cf47f0b48bdf767fa";
+    #      };
+    #   }
+    # ];
   };
 
   home.file.".config/fish/themes".source = ./themes;
