@@ -69,7 +69,7 @@
       "yt-dlp"
       "zoxide"
       "sqlite"
-      "rsync"
+      # "rsync" -> Can't install due to: https://github.com/fastlane/fastlane/discussions/27962
       "fnm"
       "imagemagick"
       "todo-txt"
