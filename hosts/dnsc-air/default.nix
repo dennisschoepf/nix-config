@@ -126,10 +126,10 @@
         orientation = "right";
         show-recents = false;
         persistent-apps = [
-          "/Applications/Safari.app"
+          "/System/Applications/Safari.app"
           "/Applications/WezTerm.app"
-          "/Applications/Calendar.app"
-          "/Applications/Reminders.app"
+          "/System/Applications/Calendar.app"
+          "/System/Applications/Reminders.app"
           "/System/Applications/System Settings.app/"
         ];
         persistent-others = [
