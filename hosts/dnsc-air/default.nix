@@ -126,7 +126,7 @@
         orientation = "right";
         show-recents = false;
         persistent-apps = [
-          "/System/Applications/Safari.app"
+          "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/WezTerm.app"
           "/System/Applications/Calendar.app"
           "/System/Applications/Reminders.app"
