@@ -138,12 +138,7 @@
     allowedHosts = "home.dnsc.io";
     settings = {
       theme = "dark";
-      color = "purple";
-      background = {
-        image = "https://github.com/user-attachments/assets/8741ae6b-be80-4435-a00f-9e873ba89340";
-        blur = "sm";
-        opacity = 50;
-      };
+      background = "https://github.com/user-attachments/assets/8741ae6b-be80-4435-a00f-9e873ba89340";
     };
     services = [
       {
@@ -195,6 +190,8 @@
                 href = "https://app.fastmail.com";
               }
             ];
+          }
+          {
             YNAB = [
               {
                 abbr = "YN";
@@ -213,6 +210,8 @@
                 href = "https://codeberg.org";
               }
             ];
+          }
+          {
             Github = [
               {
                 abbr = "GH";
