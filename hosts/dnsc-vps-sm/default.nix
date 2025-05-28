@@ -139,7 +139,7 @@
     settings = {
       theme = "dark";
       background = {
-        image = "https://postimg.cc/kV0Ynj68";
+        image = "https://i.ibb.co/v6FjzW5V/winter.png";
         blur = "sm";
         opacity = 50;
       };
