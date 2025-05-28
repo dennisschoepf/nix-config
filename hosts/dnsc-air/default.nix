@@ -63,6 +63,9 @@
     
     masApps = {
       Bitwarden = 1352778147;
+      "Kagi for Safari" = 1622835804;
+      "Wipr 2" = 1662217862;
+      "Yesterday For Old Reddit" = 1603279883;
     };
 
     brews = [
@@ -79,11 +82,10 @@
       "fnm"
       "imagemagick"
       "odin"
-      "todo-txt"
     ];
 
     casks = [
-      "zen-browser"
+      "chromium"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "mullvadvpn"
@@ -121,7 +123,7 @@
         orientation = "right";
         show-recents = false;
         persistent-apps = [
-          "/Applications/Zen.app"
+          "/Applications/Safari.app"
           "/Applications/WezTerm.app"
           "/System/Applications/System Settings.app/"
         ];
