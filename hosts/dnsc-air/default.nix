@@ -128,6 +128,8 @@
         persistent-apps = [
           "/Applications/Safari.app"
           "/Applications/WezTerm.app"
+          "/Applications/Calendar.app"
+          "/Applications/Reminders.app"
           "/System/Applications/System Settings.app/"
         ];
         persistent-others = [
