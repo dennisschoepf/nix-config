@@ -6,7 +6,8 @@ local M = {}
 
 function M.apply_to_config(config)
 	if hn == "dnsc-work" then
-		config.window_background_opacity = 0.9
+		config.window_background_opacity = 0.975
+		config.font_size = 19
 	end
 
 	if hn == "dnsc-desktop" then

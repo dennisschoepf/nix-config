@@ -8,7 +8,7 @@
 }: {
   imports = [
     inputs.home-manager.darwinModules.home-manager
-    ../../home/modules/aerospace
+    ../../home/modules/aerospace/work.nix
   ];
 
   # Setting the user
@@ -44,6 +44,7 @@
     prettierd
     atuin
     nil
+    nurl
   ];
   
   # Homebrew
@@ -51,7 +52,7 @@
     enable = true;
 
     onActivation = {
-      autoUpdate = false;
+      autoUpdate = true;
       cleanup = "zap";
     };
 
@@ -68,7 +69,7 @@
       "yt-dlp"
       "zoxide"
       "sqlite"
-      "rsync"
+      # "rsync" -> Can't install due to: https://github.com/fastlane/fastlane/discussions/27962
       "fnm"
       "imagemagick"
       "todo-txt"
@@ -83,12 +84,13 @@
       "librsvg"
       "pixman"
       "python-setuptools"
+      "rbenv"
     ];
 
     casks = [
       "arc"
       "microsoft-teams"
-      "tailscale"
+      # "tailscale"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "vlc"
@@ -102,6 +104,8 @@
       "1password"
       "android-studio"
       "zulu@17"
+      "postman"
+      "docker"
     ];
   };
 
@@ -130,6 +134,7 @@
         persistent-apps = [
           "/Applications/Arc.app"
           "/Applications/WezTerm.app"
+          "/Applications/Microsoft Teams.app"
           "/System/Applications/System Settings.app/"
         ];
         persistent-others = [
@@ -171,6 +176,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
     users = {
       dennis = import ../../home/darwin-work.nix;
     };
