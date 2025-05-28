@@ -135,6 +135,7 @@
   services.homepage-dashboard = {
     enable = true;
     listenPort = 9001; 
+    allowedHosts = "home.dnsc.io";
     services = [
       {
         "VPS" = [
