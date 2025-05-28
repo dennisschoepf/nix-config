@@ -72,6 +72,7 @@
     extraGroups = [ "wheel" "networkmanager" ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvXWZOPOJJDAoF+Sx/ZLoAVu6G/7/MAWoknBgMAzjul dennis@dnsc-mac"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKnmuxDkpDIku5t1Tykz21u78xoQ7LJR8JEcfth32LGu dennis@dnsc-work"
     ];
   };
 
