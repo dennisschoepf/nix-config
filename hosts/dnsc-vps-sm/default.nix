@@ -138,7 +138,11 @@
     allowedHosts = "home.dnsc.io";
     settings = {
       theme = "dark";
-      background = "https://github.com/user-attachments/assets/8741ae6b-be80-4435-a00f-9e873ba89340";
+      background = {
+        image = "https://postimg.cc/kV0Ynj68";
+        blur = "sm";
+        opacity = 50;
+      };
     };
     services = [
       {
