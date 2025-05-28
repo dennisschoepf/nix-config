@@ -97,6 +97,9 @@
       "eurkey"
       "karabiner-elements"
       "wezterm"
+      "cyberduck"
+      "caffeine"
+      "tailscale"
     ];
   };
 
