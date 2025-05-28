@@ -131,6 +131,30 @@
     };
   };
 
+  # Homepage
+  services.homepage-dashboard = {
+    enable = true;
+    listenPort = 9001; 
+    services = [
+      {
+        "VPS" = [
+          {
+            "Vaultwarden" = {
+              href = "https://vault.dnsc.io";
+              icon = "vaultwarden.png";
+            };
+          }
+          {
+            "Uptime Kuma" = {
+              href = "https://uptime.dnsc.io";
+              icon = "uptime-kuma.png";
+            };
+          }
+        ];
+      }
+    ];
+  };
+
   # Caddy
   services.caddy = {
     enable = true;
@@ -154,6 +178,9 @@
     '';
     virtualHosts."uptime.dnsc.io".extraConfig = ''
       reverse_proxy localhost:9000
+    '';
+    virtualHosts."home.dnsc.io".extraConfig = ''
+      reverse_proxy localhost:9001
     '';
   };
 
