@@ -140,8 +140,8 @@
       theme = "dark";
       background = {
         image = "https://i.ibb.co/v6FjzW5V/winter.png";
-        blur = "sm";
-        opacity = 50;
+        opacity = 40;
+        brightness = 50;
       };
     };
     services = [
