@@ -22,10 +22,11 @@
     mmv-go
     lazygit
     fish
+    zoxide
   ];
 
   imports = [
-    ../modules/fish
+    ../modules/fish/server.nix
     ../modules/lazygit
   ];
 
