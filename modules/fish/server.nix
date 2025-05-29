@@ -64,6 +64,8 @@
 
       fish_add_path /run/current-system/sw/bin
       fish_add_path $HOME/.config/fish/plugins
+
+      zoxide init fish | source
     '';
 
     shellAbbrs = {
