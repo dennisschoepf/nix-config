@@ -81,6 +81,7 @@
   # Home Manager Setup
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
+    backupFileExtension = "backup";
     users = {
       dennis = import ../../home/server.nix;
     };
