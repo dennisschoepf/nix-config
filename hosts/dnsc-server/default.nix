@@ -1,14 +1,16 @@
 {
   inputs,
   outputs,
-  lib,
-  config,
   pkgs,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
+    ../../modules/ups
+    ../../modules/openssh
+    ../../modules/jellyfin
+    ../../modules/syncthing
   ];
 
   # General
@@ -91,35 +93,7 @@
     enableSSHSupport = true;
   };
 
-  # UPS
-  power.ups = {
-    enable = true;
-  
-    ups."eaton-ups" = {
-      driver = "usbhid-ups";
-      port = "auto";
-    };
-  
-    users.upsmon = {
-      passwordFile = "/etc/upsmon.passwd";
-      upsmon = "primary";
-    };
-  
-    upsmon.monitor."eaton-ups".user = "upsmon";
-  };
-
   # Services
-  # SSH
-  services.openssh = {
-    enable = true;
-    settings = {
-      X11Forwarding = false;
-      PermitRootLogin = "no";
-      PasswordAuthentication = false;
-    };
-    openFirewall = true;
-  };
-
   # ZFS
   services.zfs = {
     autoSnapshot.enable = true;
@@ -167,49 +141,8 @@
     openFirewall = true;
   };
 
-  # Jellyfin
-  services.jellyfin = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-  };
-
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-      intel-vaapi-driver
-      vaapiVdpau
-      intel-compute-runtime # OpenCL filter support (hardware tonemapping and subtitle burn-in)
-      vpl-gpu-rt # QSV on 11th gen or newer
-      intel-media-sdk # QSV up to 11th gen
-    ];
-  };
-
   # Tailscale
   services.tailscale.enable = true;
-
-  # Syncthing
-  services.syncthing = {
-    enable = true;
-    group = "users";
-    guiAddress = "0.0.0.0:8384";
-    user = "dennis";
-    dataDir = "/home/dennis/sync";
-    configDir = "/home/dennis/sync/.config/syncthing";
-    overrideDevices = true;
-    overrideFolders = true;
-    settings = {
-      devices = {
-        "dnsc-pixel" = { id = "FD4XYVI-UZCBEXZ-OATLR3Y-7ZZPQOA-MFWP3Q7-OFNZY33-XH4TJAF-KVHW2AI"; };
-        "dnsc-air" = { id = "RYFO5XN-RRZZQI3-4W5DPHO-C7OKL5N-ZUQUBEI-ZKSWUHM-2BMTFRY-MDC7MA3"; };
-      };
-    };
-  };
-  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
 
   # Environment variables
   environment.variables.EDITOR = "nvim";
