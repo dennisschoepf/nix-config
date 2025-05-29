@@ -13,13 +13,13 @@
   xdg.enable = true;
 
   imports = [
-    ./modules/ssh
-    ./modules/git
-    ./modules/fish
-    ./modules/atuin
-    ./modules/wezterm
-    ./modules/nvim
-    ./modules/lazygit
+    ../modules/ssh
+    ../modules/git
+    ../modules/fish
+    ../modules/atuin
+    ../modules/wezterm
+    ../modules/nvim
+    ../modules/lazygit
   ];
 
   programs.home-manager.enable = true;

@@ -14,12 +14,12 @@
   xdg.enable = true;
 
   imports = [
-    ./modules/git
-    ./modules/fish/work.nix
-    ./modules/atuin
-    ./modules/wezterm
-    ./modules/nvim
-    ./modules/lazygit
+    ../modules/git
+    ../modules/fish/work.nix
+    ../modules/atuin
+    ../modules/wezterm
+    ../modules/nvim
+    ../modules/lazygit
   ];
 
   programs.home-manager.enable = true;
