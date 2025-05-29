@@ -72,6 +72,10 @@
       zoxide init fish | source
     '';
 
+    shellAliases = {
+      sudo = "/run/wrappers/bin/sudo";
+    };
+
     shellAbbrs = {
       lg = "lazygit";
       g = "git";
