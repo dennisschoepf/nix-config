@@ -28,7 +28,7 @@
           }
           {
             "Slides" = {
-              href = "https://uptime.dnsc.io";
+              href = "https://slides.dnsc.io";
               icon = "slidev.png";
             };
           }
