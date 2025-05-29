@@ -50,6 +50,8 @@
     '';
   };
 
+  security.sudo.enable = true;
+
   # Networking
   networking.hostName = "dnsc-vps-sm";
   networking.hostId = "380f585f";

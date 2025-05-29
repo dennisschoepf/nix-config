@@ -74,6 +74,8 @@
     ];
   };
 
+  security.sudo.enable = true;
+
   # Home Manager Setup
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
