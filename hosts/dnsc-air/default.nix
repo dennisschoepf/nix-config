@@ -128,6 +128,7 @@
         persistent-apps = [
           "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/WezTerm.app"
+          "/System/Applications/Mail.app"
           "/System/Applications/Calendar.app"
           "/System/Applications/Reminders.app"
           "/System/Applications/System Settings.app/"
