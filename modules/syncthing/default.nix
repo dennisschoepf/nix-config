@@ -5,7 +5,7 @@
     guiAddress = "0.0.0.0:8384";
     user = "dennis";
     dataDir = "/home/dennis/sync";
-    configDir = "/home/dennis/sync/.config/syncthing";
+    # configDir = "/home/dennis/sync/.config/syncthing";
     overrideDevices = true;
     overrideFolders = true;
     settings = {
