@@ -62,6 +62,10 @@
       set fish_vi_force_cursor 1
       fish_vi_key_bindings
 
+      fish_add_path /run/wrappers/bin
+      fish_add_path /home/r/.nix-profile/bin
+      fish_add_path /etc/profiles/per-user/r/bin
+      fish_add_path /nix/var/nix/profiles/default/bin
       fish_add_path /run/current-system/sw/bin
       fish_add_path $HOME/.config/fish/plugins
 
