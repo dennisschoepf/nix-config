@@ -10,8 +10,8 @@
     overrideFolders = true;
     settings = {
       devices = {
-        "dnsc-pixel" = { id = "FD4XYVI-UZCBEXZ-OATLR3Y-7ZZPQOA-MFWP3Q7-OFNZY33-XH4TJAF-KVHW2AI"; };
         "dnsc-air" = { id = "RYFO5XN-RRZZQI3-4W5DPHO-C7OKL5N-ZUQUBEI-ZKSWUHM-2BMTFRY-MDC7MA3"; };
+        "dnsc-phone" = { id = "NGHODAF-W646NPR-R5IEL2R-QLULKB6-I4APGMB-5PIM6B6-5HZCLAV-HRTSEQI"; };
       };
     };
   };
