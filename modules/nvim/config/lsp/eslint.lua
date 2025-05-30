@@ -52,6 +52,7 @@ return {
     "astro",
   },
   root_markers = {
+    "tsconfig.app.json",
     ".eslintrc",
     ".eslintrc.js",
     ".eslintrc.cjs",
@@ -78,7 +79,7 @@ return {
     packageManager = nil,
     useESLintClass = false,
     experimental = {
-      useFlatConfig = false,
+      useFlatConfig = true,
     },
     codeActionOnSave = {
       enable = true,
