@@ -64,7 +64,6 @@ return {
     "eslint.config.ts",
     "eslint.config.mts",
     "eslint.config.cts",
-    "tsconfig.app.json",
   },
   commands = {
     EslintFixAll = {
@@ -79,7 +78,7 @@ return {
     packageManager = nil,
     useESLintClass = false,
     experimental = {
-      useFlatConfig = true,
+      useFlatConfig = false,
     },
     codeActionOnSave = {
       enable = true,
