@@ -11,11 +11,23 @@
     unzip
     ripgrep
     fzf
+    fd
+    sd
+    bat
+    tldr
+    fortune
     iotop
     iftop
     just
     mmv-go
     lazygit
+    fish
+    zoxide
+  ];
+
+  imports = [
+    ../modules/fish/server.nix
+    ../modules/lazygit
   ];
 
   programs.home-manager.enable = true;

@@ -8,7 +8,7 @@
 }: {
   imports = [
     inputs.home-manager.darwinModules.home-manager
-    ../../home/modules/aerospace
+    ../../modules/aerospace
   ];
 
   # Setting the user
@@ -63,6 +63,9 @@
     
     masApps = {
       Bitwarden = 1352778147;
+      "Kagi for Safari" = 1622835804;
+      "Wipr 2" = 1662217862;
+      "Yesterday For Old Reddit" = 1603279883;
     };
 
     brews = [
@@ -79,11 +82,10 @@
       "fnm"
       "imagemagick"
       "odin"
-      "todo-txt"
     ];
 
     casks = [
-      "zen-browser"
+      "chromium"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "mullvadvpn"
@@ -95,6 +97,9 @@
       "eurkey"
       "karabiner-elements"
       "wezterm"
+      "cyberduck"
+      "caffeine"
+      "tailscale"
     ];
   };
 
@@ -121,8 +126,11 @@
         orientation = "right";
         show-recents = false;
         persistent-apps = [
-          "/Applications/Zen.app"
+          "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
           "/Applications/WezTerm.app"
+          "/System/Applications/Mail.app"
+          "/System/Applications/Calendar.app"
+          "/System/Applications/Reminders.app"
           "/System/Applications/System Settings.app/"
         ];
         persistent-others = [
@@ -164,6 +172,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     useGlobalPkgs = true;
+    backupFileExtension = "backup";
     users = {
       dennis = import ../../home/darwin.nix;
     };

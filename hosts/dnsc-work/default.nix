@@ -8,7 +8,7 @@
 }: {
   imports = [
     inputs.home-manager.darwinModules.home-manager
-    ../../home/modules/aerospace/work.nix
+    ../../modules/aerospace/work.nix
   ];
 
   # Setting the user

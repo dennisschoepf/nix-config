@@ -41,11 +41,11 @@
   xdg.enable = true;
 
   imports = [
-    ./modules/git
-    ./modules/fish
-    ./modules/atuin
-    ./modules/nvim/deck.nix
-    ./modules/lazygit
+    ../modules/git
+    ../modules/fish
+    ../modules/atuin
+    ../modules/nvim/deck.nix
+    ../modules/lazygit
   ];
 
   programs.home-manager.enable = true;

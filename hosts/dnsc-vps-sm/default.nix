@@ -11,6 +11,9 @@
     ./networking.nix
     inputs.home-manager.nixosModules.home-manager
     inputs.ip-whitelist.nixosModules.default
+    ../../modules/vaultwarden
+    ../../modules/uptime-kuma
+    ../../modules/homepage
   ];
 
   # Secrets
@@ -35,6 +38,19 @@
     options = "--delete-older-than 1w";
   };
   nix.settings.auto-optimise-store = true;
+
+  # Launch fish shell
+  programs.bash = {
+    interactiveShellInit = ''
+    if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+    then
+      shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+      exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+    fi
+    '';
+  };
+
+  security.sudo.enable = true;
 
   # Networking
   networking.hostName = "dnsc-vps-sm";
@@ -63,7 +79,6 @@
     ];
   };
   
-
   # My user account
   users.users.dennis = {
     description = "dennis";
@@ -79,6 +94,7 @@
   # Home Manager Setup
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
+    backupFileExtension = "backup";
     users = {
       dennis = import ../../home/server.nix;
     };
@@ -117,20 +133,6 @@
   # Tailscale
   services.tailscale.enable = true;
 
-  # Vaultwarden
-  services.vaultwarden = {
-    enable = true;
-    environmentFile = config.age.secrets."vaultwarden/env".path;
-  };
-
-  # Uptime Kuma
-  services.uptime-kuma = {
-    enable = true;
-    settings = {
-      PORT = "9000";
-    };
-  };
-
   # Caddy
   services.caddy = {
     enable = true;
@@ -154,6 +156,9 @@
     '';
     virtualHosts."uptime.dnsc.io".extraConfig = ''
       reverse_proxy localhost:9000
+    '';
+    virtualHosts."home.dnsc.io".extraConfig = ''
+      reverse_proxy localhost:9001
     '';
   };
 
