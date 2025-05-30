@@ -52,7 +52,6 @@ return {
     "astro",
   },
   root_markers = {
-    "tsconfig.app.json",
     ".eslintrc",
     ".eslintrc.js",
     ".eslintrc.cjs",
@@ -65,6 +64,7 @@ return {
     "eslint.config.ts",
     "eslint.config.mts",
     "eslint.config.cts",
+    "tsconfig.app.json",
   },
   commands = {
     EslintFixAll = {
