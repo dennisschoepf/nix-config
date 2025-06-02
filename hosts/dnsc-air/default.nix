@@ -44,8 +44,10 @@
     vscode-langservers-extracted
     lua-language-server
     prettierd
+    eslint_d
     atuin
     nil
+    shellcheck
   ];
   
   # Homebrew
