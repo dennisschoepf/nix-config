@@ -53,7 +53,7 @@
     yt-dlp
     zoxide
     sqlite
-    treesitter
+    tree-sitter
     rsync
     fnm
     imagemagick
