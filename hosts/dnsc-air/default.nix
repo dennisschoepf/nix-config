@@ -48,6 +48,15 @@
     atuin
     nil
     shellcheck
+    lazygit
+    ffmpeg
+    yt-dlp
+    zoxide
+    sqlite
+    treesitter
+    rsync
+    fnm
+    imagemagick
   ];
   
   # Homebrew
@@ -56,6 +65,7 @@
 
     onActivation = {
       autoUpdate = true;
+      upgrade = true;
       cleanup = "zap";
     };
 
@@ -72,18 +82,6 @@
 
     brews = [
       "mas"
-      "lazygit"
-      "ffmpeg"
-      "tree-sitter"
-      "yt-dlp"
-      "zoxide"
-      "sqlite"
-      "tinymist"
-      "typst"
-      "rsync"
-      "fnm"
-      "imagemagick"
-      "odin"
     ];
 
     casks = [
