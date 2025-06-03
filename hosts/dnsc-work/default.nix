@@ -69,7 +69,7 @@
 
     masApps = {
       Bitwarden = 1352778147;
-      XCode = 497799835;
+      # XCode = 497799835;
     };
 
     brews = [
