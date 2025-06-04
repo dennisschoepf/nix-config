@@ -85,6 +85,7 @@
       "librsvg"
       "pixman"
       "python-setuptools"
+      "gmp"
       "rbenv"
     ];
 
