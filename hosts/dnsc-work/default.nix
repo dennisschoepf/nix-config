@@ -87,7 +87,6 @@
       "python-setuptools"
       "gmp"
       "rbenv"
-      "1password-cli"
     ];
 
     casks = [
@@ -105,6 +104,7 @@
       "karabiner-elements"
       "wezterm"
       "1password"
+      "1password-cli"
       "android-studio"
       "zulu@17"
       "postman"
