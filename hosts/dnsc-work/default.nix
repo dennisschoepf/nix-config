@@ -87,6 +87,7 @@
       "python-setuptools"
       "gmp"
       "rbenv"
+      "1password-cli"
     ];
 
     casks = [
