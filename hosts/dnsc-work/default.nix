@@ -54,7 +54,7 @@
     sqlite
     fnm
     imagemagick
-    rsync
+    # rsync
   ];
   
   # Homebrew
