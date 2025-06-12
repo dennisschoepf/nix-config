@@ -47,6 +47,14 @@
     nil
     nurl
     shellcheck
+    lazygit
+    ffmpeg
+    tree-sitter
+    zoxide
+    sqlite
+    fnm
+    imagemagick
+    # rsync
   ];
   
   # Homebrew
@@ -55,26 +63,17 @@
 
     onActivation = {
       autoUpdate = true;
+      upgrade = true;
       cleanup = "zap";
     };
 
     masApps = {
       Bitwarden = 1352778147;
-      XCode = 497799835;
+      # XCode = 497799835;
     };
 
     brews = [
       "mas"
-      "lazygit"
-      "ffmpeg"
-      "tree-sitter"
-      "yt-dlp"
-      "zoxide"
-      "sqlite"
-      # "rsync" -> Can't install due to: https://github.com/fastlane/fastlane/discussions/27962
-      "fnm"
-      "imagemagick"
-      "todo-txt"
       "watchman"
       "pnpm"
       "pkg-config"
@@ -86,6 +85,7 @@
       "librsvg"
       "pixman"
       "python-setuptools"
+      "gmp"
       "rbenv"
     ];
 
@@ -104,6 +104,7 @@
       "karabiner-elements"
       "wezterm"
       "1password"
+      "1password-cli"
       "android-studio"
       "zulu@17"
       "postman"
