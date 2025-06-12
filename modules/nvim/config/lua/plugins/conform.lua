@@ -3,6 +3,7 @@ return {
   opts = {
     formatters_by_ft = {
       typescriptreact = { "prettierd" },
+      astro = { "prettierd" },
       typescript = { "prettierd" },
       javascript = { "prettierd" },
       javascriptreact = { "prettierd" },
@@ -15,7 +16,7 @@ return {
     },
     format_on_save = {
       -- These options will be passed to conform.format()
-      timeout_ms = 300,
+      timeout_ms = 500,
       lsp_format = "fallback",
     },
   },

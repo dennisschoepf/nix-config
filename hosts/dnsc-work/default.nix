@@ -40,6 +40,7 @@
     stylua
     typescript-language-server
     vscode-langservers-extracted
+    tailwindcss-language-server
     lua-language-server
     prettierd
     eslint_d

@@ -43,6 +43,7 @@
     typescript-language-server
     vscode-langservers-extracted
     astro-language-server
+    tailwindcss-language-server
     lua-language-server
     prettierd
     eslint_d
