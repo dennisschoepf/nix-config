@@ -3,6 +3,7 @@ vim.lsp.enable("lua_ls")
 vim.lsp.enable("jsonls")
 vim.lsp.enable("nil_ls")
 vim.lsp.enable("astro")
+vim.lsp.enable("tailwindcss")
 
 vim.diagnostic.config({
   virtual_text = false,
