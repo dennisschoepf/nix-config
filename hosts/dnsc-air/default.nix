@@ -5,7 +5,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.home-manager.darwinModules.home-manager
     ../../modules/aerospace
@@ -15,7 +16,7 @@
   networking.hostName = "dnsc-air";
   networking.computerName = "dnsc-air";
 
-  users.users."dennis"= {
+  users.users."dennis" = {
     home = "/Users/dennis";
     description = "Dennis Schoepf";
   };
@@ -60,7 +61,7 @@
     fnm
     imagemagick
   ];
-  
+
   # Homebrew
   homebrew = {
     enable = true;
@@ -74,7 +75,7 @@
     taps = [
       "homebrew/services"
     ];
-    
+
     masApps = {
       Bitwarden = 1352778147;
       "Kagi for Safari" = 1622835804;
@@ -119,7 +120,7 @@
     defaults = {
       smb.NetBIOSName = "dnsc-air";
 
-      NSGlobalDomain."com.apple.swipescrolldirection" = false;
+      NSGlobalDomain."com.apple.swipescrolldirection" = true;
 
       dock = {
         autohide = true;
@@ -185,7 +186,10 @@
 
   # Nix settings
   # Enable new Nix CLI and flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   nix.package = pkgs.nix;
   nix.gc = {
