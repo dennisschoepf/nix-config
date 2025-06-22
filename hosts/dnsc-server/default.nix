@@ -13,7 +13,6 @@
     ../../modules/openssh
     ../../modules/jellyfin
     ../../modules/syncthing
-    ../../modules/restic
   ];
 
   # General
