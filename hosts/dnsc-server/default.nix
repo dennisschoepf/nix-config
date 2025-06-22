@@ -193,6 +193,9 @@
         "/home/dennis/notes"
         "/main/share"
       ];
+      pruneOpts = [
+        "--keep-last 3"
+      ];
       timerConfig = {
         onCalendar = "daily";
         Persistent = true;
