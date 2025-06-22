@@ -3,12 +3,14 @@
   outputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     ../../modules/ups
     ../../modules/openssh
+    ../../modules/ssh
     ../../modules/jellyfin
     ../../modules/syncthing
   ];
@@ -37,11 +39,11 @@
   # Launch fish shell
   programs.bash = {
     interactiveShellInit = ''
-    if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
-    then
-      shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
-      exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
-    fi
+      if [[ $(${pkgs.procps}/bin/ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=""
+        exec ${pkgs.fish}/bin/fish $LOGIN_OPTION
+      fi
     '';
   };
 
@@ -67,7 +69,10 @@
   users.users.dennis = {
     description = "dennis";
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILvXWZOPOJJDAoF+Sx/ZLoAVu6G/7/MAWoknBgMAzjul dennis@dnsc-mac"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKnmuxDkpDIku5t1Tykz21u78xoQ7LJR8JEcfth32LGu dennis@dnsc-work"
@@ -86,7 +91,10 @@
   };
 
   # Enable new Nix CLI and flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Install system wide packages
   environment.systemPackages = with pkgs; [
@@ -98,6 +106,7 @@
     jellyfin-web
     jellyfin-ffmpeg
     usbutils
+    restic
   ];
 
   # Programs
@@ -133,10 +142,10 @@
       "share" = {
         "path" = "/main/share";
         "browseable" = "yes";
-	"writeable" = "yes";
+        "writeable" = "yes";
         "read only" = "no";
         "guest ok" = "yes";
-	"force user" = "dennis";
+        "force user" = "dennis";
         "force group" = "users";
       };
     };
@@ -146,7 +155,7 @@
     enable = true;
     openFirewall = true;
   };
-  
+
   services.avahi = {
     publish.enable = true;
     publish.userServices = true;
@@ -171,4 +180,3 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.11";
 }
-

@@ -21,6 +21,13 @@
         identityFile = "/Users/dennis/.ssh/id_ed25519";
         identitiesOnly = true;
       };
+      "dnsc-storage" = {
+        hostname = "u295965.your-storagebox.de";
+        user = "u295965";
+        identityFile = "/Users/dennis/.ssh/id_ed25519";
+        identitiesOnly = true;
+        port = 23;
+      };
     };
   };
 }
