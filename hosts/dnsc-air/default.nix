@@ -60,6 +60,7 @@
     rsync
     fnm
     imagemagick
+    restic
   ];
 
   # Homebrew
