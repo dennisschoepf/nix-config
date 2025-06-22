@@ -1,4 +1,5 @@
 {
+  config,
   inputs,
   outputs,
   pkgs,
@@ -26,6 +27,12 @@
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
   boot.zfs.extraPools = [ "main" ];
+
+  # Secrets
+  age = {
+    identityPaths = [ "${config.users.users.dennis.home}/.ssh/id_ed25519" ];
+    secrets."restic/password".file = ../../secrets/restic/password.age;
+  };
 
   # Nix Settings
   # Perform garbage collection weekly to maintain low disk usage
@@ -166,6 +173,22 @@
 
   # Tailscale
   services.tailscale.enable = true;
+
+  # Backups
+  services.restic.backups = {
+    initialize = true;
+    passwordFile = config.age.secrets."restic/password".path;
+    repository = "sftp:dnsc-storage:restic";
+    paths = [
+      "/home/dennis/notes"
+      "/main/share"
+    ];
+    timerConfig = {
+      onCalendar = "daily";
+      Persistent = true;
+      RandomizedDelaySec = "5h";
+    };
+  };
 
   # Environment variables
   environment.variables.EDITOR = "nvim";
