@@ -122,6 +122,16 @@
     enableSSHSupport = true;
   };
 
+  # Root SSH
+  programs.ssh.extraConfig = ''
+    Host dnsc-storage
+      Port 23
+      IdentitiesOnly yes
+      User u295965
+      HostName u295965.your-storagebox.de
+      IdentityFile /home/dennis/.ssh/id_ed25519
+  '';
+
   # Services
   # ZFS
   services.zfs = {
