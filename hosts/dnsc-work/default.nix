@@ -5,7 +5,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.home-manager.darwinModules.home-manager
     ../../modules/aerospace/work.nix
@@ -15,7 +16,7 @@
   networking.hostName = "dnsc-work";
   networking.computerName = "dnsc-work";
 
-  users.users."dennis"= {
+  users.users."dennis" = {
     home = "/Users/dennis";
     description = "Dennis Schoepf";
   };
@@ -57,7 +58,7 @@
     imagemagick
     # rsync
   ];
-  
+
   # Homebrew
   homebrew = {
     enable = true;
@@ -126,6 +127,8 @@
 
     defaults = {
       smb.NetBIOSName = "dnsc-work";
+
+      NSGlobalDomain."com.apple.swipescrolldirection" = false;
 
       dock = {
         autohide = true;
