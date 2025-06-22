@@ -13,25 +13,31 @@
     ip-whitelist.url = "github:Oak-Digital/nixos-ip-whitelist-firewall";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nix-darwin,
-    agenix,
-    ...
-    } @ inputs: let
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nix-darwin,
+      agenix,
+      ...
+    }@inputs:
+    let
       inherit (self) outputs;
-    in {
+    in
+    {
       nixosConfigurations.dnsc-server = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/dnsc-server];
+        specialArgs = { inherit inputs outputs; };
+        modules = [
+          ./hosts/dnsc-server
+          agenix.nixosModules.default
+        ];
       };
 
       nixosConfigurations.dnsc-vps-sm = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = { inherit inputs outputs; };
         modules = [
           ./hosts/dnsc-vps-sm
           agenix.nixosModules.default
@@ -40,14 +46,14 @@
 
       darwinConfigurations.dnsc-air = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/dnsc-air];
+        specialArgs = { inherit inputs outputs; };
+        modules = [ ./hosts/dnsc-air ];
       };
 
       darwinConfigurations.dnsc-work = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/dnsc-work];
+        specialArgs = { inherit inputs outputs; };
+        modules = [ ./hosts/dnsc-work ];
       };
 
       homeConfigurations."dnsc-deck" = home-manager.lib.homeManagerConfiguration {
