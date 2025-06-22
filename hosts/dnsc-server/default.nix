@@ -178,7 +178,7 @@
   services.restic.backups = {
     initialize = true;
     passwordFile = config.age.secrets."restic/password".path;
-    repository = "sftp:dnsc-storage:restic";
+    repository = "sftp:dnsc-storage:restic/dnsc-server";
     paths = [
       "/home/dennis/notes"
       "/main/share"
