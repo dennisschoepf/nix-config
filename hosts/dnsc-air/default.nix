@@ -103,6 +103,7 @@
       "cyberduck"
       "caffeine"
       "tailscale"
+      "witsy"
     ];
   };
 

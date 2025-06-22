@@ -111,6 +111,7 @@
       "zulu@17"
       "postman"
       "docker"
+      "witsy"
     ];
   };
 
