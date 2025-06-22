@@ -10,7 +10,6 @@
     inputs.home-manager.nixosModules.home-manager
     ../../modules/ups
     ../../modules/openssh
-    ../../modules/ssh
     ../../modules/jellyfin
     ../../modules/syncthing
     ../../modules/restic

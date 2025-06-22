@@ -28,7 +28,7 @@
   imports = [
     ../modules/fish/server.nix
     ../modules/lazygit
-    ../modules/ssh/server.nix
+    ../modules/ssh
   ];
 
   programs.home-manager.enable = true;
