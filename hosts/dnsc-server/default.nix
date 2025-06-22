@@ -175,17 +175,19 @@
 
   # Backups
   services.restic.backups = {
-    initialize = true;
-    passwordFile = config.age.secrets."restic/password".path;
-    repository = "sftp:dnsc-storage:restic/dnsc-server";
-    paths = [
-      "/home/dennis/notes"
-      "/main/share"
-    ];
-    timerConfig = {
-      onCalendar = "daily";
-      Persistent = true;
-      RandomizedDelaySec = "5h";
+    "dnsc-storage" = {
+      initialize = true;
+      passwordFile = config.age.secrets."restic/password".path;
+      repository = "sftp:dnsc-storage:restic/dnsc-server";
+      paths = [
+        "/home/dennis/notes"
+        "/main/share"
+      ];
+      timerConfig = {
+        onCalendar = "daily";
+        Persistent = true;
+        RandomizedDelaySec = "5h";
+      };
     };
   };
 
