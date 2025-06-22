@@ -128,7 +128,7 @@
     defaults = {
       smb.NetBIOSName = "dnsc-work";
 
-      NSGlobalDomain."com.apple.swipescrolldirection" = true;
+      NSGlobalDomain."com.apple.swipescrolldirection" = false;
 
       dock = {
         autohide = true;
