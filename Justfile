@@ -25,12 +25,12 @@ gc:
   sudo nix-collect-garbage --delete-old 
 
 # dnsc-air
-mac-re:
+mre:
   darwin-rebuild switch --flake .
 
-mac-up:
+mup:
   darwin-rebuild switch --recreate-lock-file --flake . && brew upgrade --cask --greedy
 
 # dnsc-deck
-deck-re:
+dre:
   nix run home-manager/master -- switch --flake .#dnsc-deck
