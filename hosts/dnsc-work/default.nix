@@ -110,7 +110,7 @@
       "android-studio"
       "zulu@17"
       "postman"
-      "docker"
+      "docker-desktop"
       "witsy"
     ];
   };
