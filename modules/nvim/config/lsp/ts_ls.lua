@@ -12,7 +12,9 @@ return {
   init_options = {
     hostInfo = "neovim",
     preferences = {
-      importModuleSpecifierPreference = "relative",
+      includeCompletionsForModuleExports = true,
+      includeCompletionsForImportStatements = true,
+      importModuleSpecifierPreference = "shortest",
       importModuleSpecifierEnding = "minimal",
     },
   },
