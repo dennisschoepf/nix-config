@@ -68,9 +68,16 @@ return {
     {
       "<leader>.",
       function()
+        Snacks.picker.files()
+      end,
+      desc = "Files",
+    },
+    {
+      "<leader>.",
+      function()
         Snacks.picker.files({ hidden = true, ignored = true })
       end,
-      desc = "",
+      desc = "All files",
     },
     {
       "<leader><leader>",
