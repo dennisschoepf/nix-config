@@ -56,6 +56,7 @@
     sqlite
     fnm
     imagemagick
+    circumflex
     # rsync
   ];
 
