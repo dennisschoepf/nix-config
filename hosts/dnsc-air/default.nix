@@ -92,7 +92,6 @@
       "chromium"
       "font-victor-mono"
       "font-victor-mono-nerd-font"
-      "mullvadvpn"
       "vlc"
       "alfred"
       "wezterm"
@@ -104,7 +103,7 @@
       "cyberduck"
       "caffeine"
       "tailscale"
-      "witsy"
+      "raycast"
     ];
   };
 
