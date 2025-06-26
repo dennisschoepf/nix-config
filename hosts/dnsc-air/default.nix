@@ -93,7 +93,6 @@
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "vlc"
-      "alfred"
       "wezterm"
       "hiddenbar"
       "syncthing"
