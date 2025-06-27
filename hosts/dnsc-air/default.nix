@@ -103,6 +103,7 @@
       "caffeine"
       "tailscale"
       "raycast"
+      "spotify"
     ];
   };
 

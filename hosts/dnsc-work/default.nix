@@ -99,7 +99,6 @@
       "font-victor-mono"
       "font-victor-mono-nerd-font"
       "vlc"
-      "alfred"
       "wezterm"
       "hiddenbar"
       "syncthing"
@@ -112,7 +111,8 @@
       "zulu@17"
       "postman"
       "docker-desktop"
-      "witsy"
+      "raycast"
+      "spotify"
     ];
   };
 
