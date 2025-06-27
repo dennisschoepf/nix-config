@@ -111,8 +111,8 @@
       "zulu@17"
       "postman"
       "docker-desktop"
-      "witsy"
       "raycast"
+      "spotify"
     ];
   };
 
